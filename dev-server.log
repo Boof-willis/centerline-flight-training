@@ -1,0 +1,358 @@
+
+> centerline-flight-training@1.0.0 dev
+> astro dev
+
+10:50:58 [types] Generated 1ms
+
+ astro  v4.16.19 ready in 260 ms
+
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+
+10:50:59 watching for file changes...
+10:50:59 [ERROR] [vite] Error:   Failed to scan for dependencies from entries:
+  /Users/spencerroberts/Desktop/Centerline 2/src/pages/index.astro
+/Users/spencerroberts/Desktop/Centerline 2/src/components/ui/BenefitsBar.astro
+/Users/spencerroberts/Desktop/Centerline 2/src/components/ui/CtaBand.astro
+/Users/spencerroberts/Desktop/Centerline 2/src/components/ui/Footer.astro
+/Users/spencerroberts/Desktop/Centerline 2/src/components/ui/InstructorsFleet.astro
+/Users/spencerroberts/Desktop/Centerline 2/src/components/ui/Testimonials.astro
+/Users/spencerroberts/Desktop/Centerline 2/src/components/ui/WhyUs.astro
+/Users/spencerroberts/Desktop/Centerline 2/src/components/ui/islands/AircraftShowcase.tsx
+/Users/spencerroberts/Desktop/Centerline 2/src/components/ui/islands/CareerCards.tsx
+/Users/spencerroberts/Desktop/Centerline 2/src/components/ui/islands/Faq.tsx
+/Users/spencerroberts/Desktop/Centerline 2/src/components/ui/islands/HeaderClient.tsx
+/Users/spencerroberts/Desktop/Centerline 2/src/components/ui/islands/HeroClient.tsx
+/Users/spencerroberts/Desktop/Centerline 2/src/components/ui/islands/ReviewCarousel.tsx
+/Users/spencerroberts/Desktop/Centerline 2/src/components/ui/islands/StatsCounter.tsx
+/Users/spencerroberts/Desktop/Centerline 2/src/components/ui/islands/TrainingPathway.tsx
+
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mExpected "}" but found "ve"[0m
+
+    src/components/ui/islands/ReviewCarousel.tsx:26:119:
+[37m      26 │ ...ctors never made me feel behind. Best investment I'[32mve[37m ever made.',
+         │                                                       [32m~~[37m
+         ╵                                                       [32m}[0m
+
+
+    at failureErrorWithLog (/Users/spencerroberts/Desktop/Centerline 2/node_modules/esbuild/lib/main.js:1472:15)
+    at /Users/spencerroberts/Desktop/Centerline 2/node_modules/esbuild/lib/main.js:945:25
+    at runOnEndCallbacks (/Users/spencerroberts/Desktop/Centerline 2/node_modules/esbuild/lib/main.js:1315:45)
+    at buildResponseToResult (/Users/spencerroberts/Desktop/Centerline 2/node_modules/esbuild/lib/main.js:943:7)
+    at /Users/spencerroberts/Desktop/Centerline 2/node_modules/esbuild/lib/main.js:955:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (/Users/spencerroberts/Desktop/Centerline 2/node_modules/esbuild/lib/main.js:954:54)
+    at handleRequest (/Users/spencerroberts/Desktop/Centerline 2/node_modules/esbuild/lib/main.js:647:17)
+    at handleIncomingPacket (/Users/spencerroberts/Desktop/Centerline 2/node_modules/esbuild/lib/main.js:672:7)
+    at Socket.readFromStdout (/Users/spencerroberts/Desktop/Centerline 2/node_modules/esbuild/lib/main.js:600:7)
+10:51:31 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+10:51:31 [200] / 7ms
+10:51:46 [watch] src/components/ui/islands/ReviewCarousel.tsx
+10:51:46 [watch] /src/styles/global.css
+10:52:10 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+10:52:10 [200] / 2ms
+10:52:10 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+10:54:57 [200] / 11ms
+11:05:26 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+11:05:26 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:05:38 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+11:05:38 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:07:12 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+11:07:12 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:07:16 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+11:07:16 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:07:26 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+11:07:26 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:07:30 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:07:30 [200] / 2ms
+11:08:21 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+11:08:21 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:08:31 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+11:08:31 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:08:38 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:08:38 [200] / 5ms
+11:09:36 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+11:09:48 [200] / 5ms
+11:09:48 [404] /.well-known/appspecific/com.chrome.devtools.json 5ms
+11:15:42 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+11:15:42 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:17:11 [watch] /src/components/ui/islands/TrainingPathway.tsx, /src/styles/global.css
+11:17:11 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:17:25 [watch] /src/components/ui/islands/TrainingPathway.tsx, /src/styles/global.css
+11:17:25 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:17:37 [watch] /src/components/ui/islands/TrainingPathway.tsx, /src/styles/global.css
+11:17:37 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:22:38 Configuration file updated. Restarting...
+11:22:38 [types] Generated 1ms
+11:22:44 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:22:45 [200] / 4ms
+11:22:45 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:22:46 [200] / 3ms
+11:22:55 [watch] /src/components/ui/islands/TrainingPathway.tsx, /src/styles/global.css
+11:22:55 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:22:56 [vite] ✨ new dependencies optimized: lucide-react, clsx, tailwind-merge
+11:22:56 [vite] ✨ optimized dependencies changed. reloading
+11:22:56 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:22:56 [200] / 4ms
+11:22:56 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:29:09 [watch] /src/styles/global.css, /src/components/ui/islands/TrainingPathway.tsx
+11:29:09 [watch] /src/components/ui/islands/TrainingPathway.tsx, /src/styles/global.css
+11:29:09 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:30:12 [watch] src/pages/index.astro
+11:30:13 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:30:13 [ERROR] Testimonials is not defined
+  Stack trace:
+    at /Users/spencerroberts/Desktop/Centerline 2/eval at instantiateModule (file:/Users/spencerroberts/Desktop/Centerline%202/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:53011:24
+    [...] See full stack trace in the browser, or rerun with --verbose.
+11:30:15 [watch] src/pages/index.astro
+11:30:16 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:30:16 [200] / 1ms
+11:30:16 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:30:29 [watch] src/components/ui/islands/TestimonialsColumns.tsx
+11:30:29 [watch] src/pages/index.astro
+11:30:30 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:30:30 [200] / 8ms
+11:30:30 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:34:13 Configuration file updated. Restarting...
+11:34:13 [types] Generated 1ms
+11:34:13 [vite] Re-optimizing dependencies because lockfile has changed
+11:34:21 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:34:21 [200] / 2ms
+11:34:21 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:34:23 [200] / 4ms
+11:35:00 [watch] src/pages/index.astro
+11:35:01 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:35:01 [ERROR] TestimonialsColumns is not defined
+  Stack trace:
+    at eval (eval at instantiateModule (file:///Users/spencerroberts/Desktop/Centerline%202/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:53011:24), <anonymous>:36:1904)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+11:35:02 [watch] src/pages/index.astro
+11:35:03 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:35:03 [200] / 1ms
+11:35:03 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:35:19 [vite] ✨ new dependencies optimized: framer-motion
+11:35:19 [vite] ✨ optimized dependencies changed. reloading
+11:35:19 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:35:19 [200] / 2ms
+11:35:19 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:35:19 [watch] /src/components/ui/islands/TestimonialsAnimated.tsx, /src/styles/global.css
+11:35:19 [watch] src/pages/index.astro
+11:35:19 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:35:19 [WARN] [vite] [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+18 |  
+19 |  /* Google Fonts - Inter & Manrope */
+20 |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 |  
+22 |  /* Custom Hero Animations */
+11:35:19 [200] / 2ms

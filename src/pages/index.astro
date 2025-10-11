@@ -1,0 +1,100 @@
+---
+import '@/styles/global.css';
+import HeaderClient from '@/components/ui/islands/HeaderClient';
+import HeroClient from '@/components/ui/islands/HeroClient';
+import BenefitsBar from '@/components/ui/BenefitsBar.astro';
+import CareerCards from '@/components/ui/islands/CareerCards';
+import ReviewCarousel from '@/components/ui/islands/ReviewCarousel';
+import TrainingPathway from '@/components/ui/islands/TrainingPathway';
+import AircraftShowcase from '@/components/ui/islands/AircraftShowcase';
+import WhyUs from '@/components/ui/WhyUs.astro';
+import TestimonialsAnimated from '@/components/ui/islands/TestimonialsAnimated';
+import InstructorsFleet from '@/components/ui/InstructorsFleet.astro';
+import Faq from '@/components/ui/islands/Faq';
+import CtaBand from '@/components/ui/CtaBand.astro';
+import Footer from '@/components/ui/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centerline Flight Training - Utah's Premier Part-61 Flight School</title>
+    <meta name="description" content="Train on your schedule in Spanish Fork. Weekend & evening flights for working professionals. Modern hangared fleet, transparent pricing, pay-as-you-go from $140." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- Header -->
+    <HeaderClient client:load />
+
+    <!-- Hero Section -->
+    <HeroClient client:load />
+
+    <!-- Benefits Bar -->
+    <BenefitsBar />
+
+    <!-- Career Paths Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-[1200px] mx-auto px-8">
+        <h2 class="text-center text-4xl font-bold mb-6 text-gray-800">Why Become a Pilot?</h2>
+        <p class="text-center max-w-[700px] mx-auto mb-12 text-lg text-gray-600">
+          Whether you're pursuing an aviation career or flying for fun, we'll guide you from discovery flight to your goals.
+        </p>
+        <CareerCards client:visible />
+      </div>
+    </section>
+
+    <!-- Review Carousel Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-[1200px] mx-auto px-8">
+        <ReviewCarousel client:visible />
+      </div>
+    </section>
+
+    <!-- Training Pathway Section -->
+    <section id="programs" class="py-20 bg-white">
+      <div class="max-w-[1200px] mx-auto px-8">
+        <h2 class="text-center text-4xl font-bold mb-6 text-gray-800">Your Training Pathway</h2>
+        <p class="text-center max-w-[700px] mx-auto mb-12 text-lg text-gray-600">
+          Part 61 flexible training means you control the pace. Train as often as you want while keeping your current job.
+        </p>
+        <TrainingPathway client:visible />
+        <div class="text-center mt-8">
+          <a href="#discovery" class="cta-button">Start Your Training Journey</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aircraft Showcase Section -->
+    <section id="discovery" class="bg-black py-20 min-h-screen">
+      <AircraftShowcase client:visible />
+    </section>
+
+    <!-- Why Us Section -->
+    <WhyUs />
+
+    <!-- Testimonials Section -->
+    <section class="bg-gray-50 py-20">
+      <TestimonialsAnimated client:visible />
+    </section>
+
+    <!-- Instructors and Fleet Section -->
+    <InstructorsFleet />
+
+    <!-- FAQ Section -->
+    <section id="faq" class="bg-gray-50 py-20">
+      <div class="max-w-[1200px] mx-auto px-8">
+        <h2 class="text-center text-4xl font-bold mb-12 text-gray-800">Frequently Asked Questions</h2>
+        <Faq client:visible />
+      </div>
+    </section>
+
+    <!-- CTA Band -->
+    <CtaBand />
+
+    <!-- Footer -->
+    <Footer />
+  </body>
+</html>
+
