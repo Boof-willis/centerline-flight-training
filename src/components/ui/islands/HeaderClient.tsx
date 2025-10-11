@@ -1,17 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function HeaderClient() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 100);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -23,10 +13,7 @@ export default function HeaderClient() {
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-[1000] py-4 transition-all duration-300 ${
-        scrolled ? 'bg-transparent' : 'bg-transparent'
-      }`}
+    <header className="absolute top-0 left-0 right-0 z-[1000] py-4"
     >
       <nav className="flex justify-between items-center w-full px-8 max-w-[1200px] mx-auto">
         <div className="flex items-center gap-4">

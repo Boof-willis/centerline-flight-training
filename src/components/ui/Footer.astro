@@ -2,50 +2,76 @@
 // Footer component
 ---
 
-<footer class="bg-gray-800 text-white py-12 pb-4">
-  <div class="max-w-[1200px] mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-    <div class="footer-section">
-      <h3 class="text-xl font-semibold mb-4">Visit Us</h3>
-      <p><strong>Hangar #122</strong></p>
-      <p>Spanish Fork-Springville Airport (SPK)</p>
-      <p>2050 N 300 W</p>
-      <p>Spanish Fork, UT 84660</p>
-      <p class="mt-4"><strong>Hours:</strong></p>
-      <p>Mon-Fri: 8am-5pm</p>
-      <p>Saturday: 8am-3pm</p>
-      <p>Sunday: By Appointment</p>
+<footer class="bg-black text-white py-16">
+  <div class="max-w-[1200px] mx-auto px-8">
+    <div class="flex flex-col md:flex-row justify-between gap-16">
+      <!-- Brand/About Column - Left Side -->
+      <div class="md:max-w-[350px]">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+            <span class="text-2xl">✈️</span>
+          </div>
+          <h3 class="text-xl font-bold">Centerline</h3>
+        </div>
+        <p class="text-gray-400 leading-relaxed mb-6">
+          Professional flight training in Spanish Fork, Utah. Part 61 flexible scheduling for working professionals. From discovery flights to airline careers.
+        </p>
+        <p class="text-gray-500 text-sm">
+          Hangar #122 • Spanish Fork Airport (SPK)
+        </p>
+      </div>
+
+      <!-- Links Group - Right Side -->
+      <div class="flex flex-col sm:flex-row gap-12 md:gap-16">
+        <!-- Quick Links Column -->
+        <div>
+          <h4 class="text-base font-medium mb-6 text-gray-300">Quick Links</h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="#programs" class="text-gray-400 hover:text-white transition-colors">Programs</a>
+            </li>
+            <li>
+              <a href="#fleet" class="text-gray-400 hover:text-white transition-colors">Fleet</a>
+            </li>
+            <li>
+              <a href="#discovery" class="text-gray-400 hover:text-white transition-colors">Discovery Flight</a>
+            </li>
+            <li>
+              <a href="#why-us" class="text-gray-400 hover:text-white transition-colors">Why Us</a>
+            </li>
+            <li>
+              <a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQs</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Column -->
+        <div>
+          <h4 class="text-base font-medium mb-6 text-gray-300">Contact</h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="tel:+18014770418" class="text-gray-400 hover:text-white transition-colors">
+                (801) 477-0418
+              </a>
+            </li>
+            <li>
+              <a href="mailto:contact@centerlineaviationinc.com" class="text-gray-400 hover:text-white transition-colors">
+                Email Us
+              </a>
+            </li>
+            <li>
+              <a href="https://maps.google.com/?q=Spanish+Fork+Airport+Hangar+122" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+                Directions
+              </a>
+            </li>
+            <li class="text-gray-500 text-sm pt-2">
+              Mon-Fri: 8am-5pm<br />
+              Sat: 8am-3pm
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    
-    <div class="footer-section">
-      <h3 class="text-xl font-semibold mb-4">Contact</h3>
-      <p><strong>Phone:</strong> (801) 477-0418</p>
-      <p class="text-sm text-gray-400">(Text preferred for fastest response)</p>
-      <p><strong>Email:</strong> contact@centerlineaviationinc.com</p>
-      <p class="mt-4">
-        <a href="#" class="text-blue-400">📍 Get Directions to Hangar #122</a>
-      </p>
-    </div>
-    
-    <div class="footer-section">
-      <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
-      <a href="#programs" class="block text-gray-300 hover:text-white mb-2">Programs</a>
-      <a href="#fleet" class="block text-gray-300 hover:text-white mb-2">Fleet</a>
-      <a href="#discovery" class="block text-gray-300 hover:text-white mb-2">Discovery Flight</a>
-      <a href="#why-us" class="block text-gray-300 hover:text-white mb-2">Why Us</a>
-      <a href="#faq" class="block text-gray-300 hover:text-white mb-2">FAQs</a>
-    </div>
-    
-    <div class="footer-section">
-      <h3 class="text-xl font-semibold mb-4">Legal & Policies</h3>
-      <a href="#" class="block text-gray-300 hover:text-white mb-2">Privacy Policy</a>
-      <a href="#" class="block text-gray-300 hover:text-white mb-2">Terms of Service</a>
-      <a href="#" class="block text-gray-300 hover:text-white mb-2">Rental Agreement</a>
-      <a href="#" class="block text-gray-300 hover:text-white mb-2">Safety Policy</a>
-      <a href="#" class="block text-gray-300 hover:text-white mb-2">FAA Regulations</a>
-    </div>
-  </div>
-  <div class="border-t border-gray-700 mt-8 pt-4 text-center text-gray-500">
-    <p>&copy; 2024 Centerline Flight Training. All rights reserved.</p>
   </div>
 </footer>
 

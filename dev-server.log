@@ -360,3 +360,85 @@
 12:29:07 [watch] /src/styles/global.css
 12:38:35 Configuration file updated. Restarting...
 12:38:35 [types] Generated 1ms
+13:29:46 [200] / 3ms
+13:31:00 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+13:31:09 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+13:31:55 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+13:32:02 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+13:35:23 [watch] src/components/ui/Footer.astro
+13:35:24 [200] / 3ms
+13:35:33 [watch] src/components/ui/Footer.astro
+13:35:34 [200] / 3ms
+13:35:50 [200] / 3ms
+13:38:05 [watch] src/components/ui/Footer.astro
+13:38:05 [200] / 2ms
+13:38:13 [watch] src/components/ui/Footer.astro
+13:38:13 [200] / 1ms
+13:41:46 [200] / 5ms
+13:47:04 [watch] /src/components/ui/islands/Faq.tsx, /src/styles/global.css
+13:47:17 [watch] src/pages/index.astro
+13:47:18 [200] / 2ms
+13:47:29 [watch] /src/components/ui/islands/Faq.tsx, /src/styles/global.css
+13:47:29 [watch] src/pages/index.astro
+13:47:30 [200] / 1ms
+13:49:33 [watch] /src/components/ui/islands/Faq.tsx, /src/styles/global.css
+13:49:42 [watch] /src/components/ui/islands/Faq.tsx, /src/styles/global.css
+13:51:18 [watch] /src/components/ui/islands/Faq.tsx, /src/styles/global.css
+13:51:26 [watch] /src/components/ui/islands/Faq.tsx, /src/styles/global.css
+13:52:28 [watch] /src/components/ui/islands/Faq.tsx, /src/styles/global.css
+13:52:39 [watch] /src/components/ui/islands/Faq.tsx, /src/styles/global.css
+13:55:45 [watch] src/pages/index.astro
+13:55:46 [200] / 11ms
+13:55:52 [watch] src/pages/index.astro
+13:55:53 [200] / 1ms
+13:56:41 [watch] /src/components/ui/islands/Faq.tsx, /src/styles/global.css
+13:56:49 [watch] /src/components/ui/islands/Faq.tsx, /src/styles/global.css
+13:58:15 [watch] /src/components/ui/islands/Faq.tsx, /src/styles/global.css
+13:58:21 [watch] /src/components/ui/islands/Faq.tsx, /src/styles/global.css
+13:58:26 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+13:59:20 [200] / 2ms
+13:59:59 [watch] /src/components/ui/islands/Faq.tsx, /src/styles/global.css
+14:00:08 [watch] /src/components/ui/islands/Faq.tsx, /src/styles/global.css
+14:00:29 [watch] /src/components/ui/islands/Faq.tsx, /src/styles/global.css
+14:00:36 [watch] /src/components/ui/islands/Faq.tsx, /src/styles/global.css
+14:09:44 [watch] /src/components/ui/islands/Faq.tsx, /src/styles/global.css
+14:09:55 [watch] /src/components/ui/islands/Faq.tsx, /src/styles/global.css
+14:16:54 [404] /.well-known/appspecific/com.chrome.devtools.json 11ms
+14:19:46 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+14:20:00 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+14:21:59 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+14:22:11 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+14:24:59 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+14:25:10 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+14:25:28 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+14:30:08 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+14:30:27 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+14:31:15 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+14:31:28 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+14:33:19 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+14:33:38 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+14:47:13 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+14:47:28 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+14:52:09 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+14:52:28 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:10:44 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:11:12 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:12:06 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:12:15 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:12:37 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:14:33 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:14:51 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:15:55 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:16:15 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:17:30 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:17:38 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:17:56 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:18:08 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:25:29 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:25:50 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:27:36 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:27:55 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:29:19 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:29:32 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+15:38:16 [200] / 2ms
+15:40:01 [200] / 27ms
