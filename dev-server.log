@@ -442,3 +442,17 @@
 15:29:32 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
 15:38:16 [200] / 2ms
 15:40:01 [200] / 27ms
+15:58:07 [200] / 51ms
+12:14:51 [200] / 12ms
+12:27:24 [404] /.well-known/appspecific/com.chrome.devtools.json 3ms
+12:28:08 [watch] src/components/ui/BenefitsBar.astro
+12:28:09 [200] / 2ms
+12:28:09 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+12:28:09 [404] /images/aircraft/da20-eclipse-hangar.jpg 1ms
+12:28:10 [404] /images/aircraft/da20-eclipse-hangar.jpg 1ms
+12:28:19 [watch] src/components/ui/BenefitsBar.astro
+12:28:20 [200] / 2ms
+12:28:20 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+12:28:20 [404] /images/aircraft/da20-eclipse-hangar.jpg 1ms
+12:28:21 [404] /images/aircraft/da20-eclipse-hangar.jpg 0ms
+12:29:07 [404] /images/aircraft/da20-eclipse-hangar.jpg 1ms
