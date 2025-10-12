@@ -57,7 +57,7 @@ export default function HeroClient() {
   };
 
   return (
-    <section className="relative h-[90vh] md:h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[95vh] md:h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
       {/* Parallax Container - moves background and content together */}
       <div ref={parallaxRef} className="absolute inset-0 w-full h-full" style={{ willChange: 'transform' }}>
         {/* Background Image */}
@@ -86,9 +86,9 @@ export default function HeroClient() {
 
           {/* H1 with Character Reveal */}
           <h1 className="hero-title font-heading text-5xl md:text-7xl font-medium leading-[1.2] mb-7 text-white tracking-tight max-w-[900px]">
-            Your Pilot Career
+            {wrapCharacters('Your Pilot Career')}
             <br />
-            Starts Here
+            {wrapCharacters('Starts Here')}
           </h1>
 
           {/* Subheading */}

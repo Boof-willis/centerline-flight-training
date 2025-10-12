@@ -7,9 +7,7 @@ import CareerCards from '@/components/ui/islands/CareerCards';
 import ReviewCarousel from '@/components/ui/islands/ReviewCarousel';
 import TrainingPathway from '@/components/ui/islands/TrainingPathway';
 import AircraftShowcase from '@/components/ui/islands/AircraftShowcase';
-import WhyUs from '@/components/ui/WhyUs.astro';
 import TestimonialsAnimated from '@/components/ui/islands/TestimonialsAnimated';
-import InstructorsFleet from '@/components/ui/InstructorsFleet.astro';
 import Faq from '@/components/ui/islands/Faq';
 import CtaBand from '@/components/ui/CtaBand.astro';
 import Footer from '@/components/ui/Footer.astro';
@@ -55,13 +53,13 @@ import Footer from '@/components/ui/Footer.astro';
     <!-- Training Pathway Section -->
     <section id="programs" class="py-20 bg-white">
       <div class="max-w-[1200px] mx-auto px-8">
-        <h2 class="text-center text-4xl font-bold mb-6 text-gray-800">Your Training Pathway</h2>
-        <p class="text-center max-w-[700px] mx-auto mb-12 text-lg text-gray-600">
+        <h2 class="text-center text-[36px] sm:text-[40px] lg:text-[52px] font-medium font-heading mb-6 text-gray-800">Your Training Pathway</h2>
+        <p class="text-center max-w-[700px] mx-auto mb-12 text-lg text-gray-600 font-heading">
           Part 61 flexible training means you control the pace. Train as often as you want while keeping your current job.
         </p>
         <TrainingPathway client:visible />
         <div class="text-center mt-8">
-          <a href="#discovery" class="cta-button">Start Your Training Journey</a>
+          <a href="#discovery" class="cta-button !bg-[#F2F2F2] !border !border-[#E1E1E1] !shadow-none !h-[48px]">Start Your Training Journey</a>
         </div>
       </div>
     </section>
@@ -72,7 +70,42 @@ import Footer from '@/components/ui/Footer.astro';
     </section>
 
     <!-- Why Us Section -->
-    <WhyUs />
+    <section id="why-us" class="py-20 bg-white">
+      <div class="max-w-[1200px] mx-auto px-8">
+        <!-- Header -->
+        <div class="text-center mb-12">
+          <h2 class="text-[36px] sm:text-[40px] lg:text-[52px] font-medium font-heading text-gray-800">Why Utah Students Choose Centerline</h2>
+        </div>
+
+        <!-- Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div class="h-[400px] bg-gray-200 rounded-xl flex items-center justify-center text-gray-600 font-heading">
+              PLACEHOLDER: Why Us Section Image
+            </div>
+          </div>
+          
+          <div>
+            <ul class="list-none space-y-6">
+              <li class="border-b border-gray-200 pb-6">
+                <h3 class="text-xl font-semibold mb-2 text-gray-900 font-heading">Your Schedule, Your Pace</h3>
+                <p class="text-gray-600 font-heading">Morning, evening, weekend availability—train as often as you want while keeping your job</p>
+              </li>
+              
+              <li class="border-b border-gray-200 pb-6">
+                <h3 class="text-xl font-semibold mb-2 text-gray-900 font-heading">Pay-As-You-Go + Financing</h3>
+                <p class="text-gray-600 font-heading">No large upfront payments required—flexible payment plans for all budgets</p>
+              </li>
+              
+              <li class="pb-6">
+                <h3 class="text-xl font-semibold mb-2 text-gray-900 font-heading">Newer Aircraft Only</h3>
+                <p class="text-gray-600 font-heading">2019+ Diamond DA20 & DA40 with modern Garmin glass cockpits—newer than competing schools</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Testimonials Section -->
     <section class="bg-gray-50 py-20">
@@ -80,7 +113,22 @@ import Footer from '@/components/ui/Footer.astro';
     </section>
 
     <!-- Instructors and Fleet Section -->
-    <InstructorsFleet />
+    <section id="fleet" class="py-20 bg-white">
+      <div class="max-w-[1200px] mx-auto px-8">
+        <h2 class="text-center text-4xl font-bold mb-12 text-gray-800 font-heading">Meet Our Team & Fleet</h2>
+
+        <!-- Team Photo -->
+        <div class="mb-16">
+          <h3 class="text-center mb-8 text-gray-800 text-2xl font-heading">Your Flight Instructors</h3>
+          <div class="w-full max-w-[900px] mx-auto h-[400px] bg-gray-200 rounded-xl flex items-center justify-center text-gray-600 font-heading">
+            PLACEHOLDER: Team Photo
+          </div>
+          <p class="text-center mt-6 text-gray-600 max-w-[700px] mx-auto font-heading">
+            Our CFIs advance to SkyWest, FedEx, and corporate aviation—learn from pilots with real career experience who know exactly what it takes to succeed.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- FAQ Section -->
     <section id="faq" class="bg-white py-24">

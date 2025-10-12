@@ -12,9 +12,14 @@ const Feature = ({ title, description, icon, index }: FeatureProps) => {
   return (
     <div
       className={cn(
-        'flex flex-col lg:border-r py-10 relative group/feature border-gray-200',
-        (index === 0 || index === 2) && 'lg:border-l border-gray-200',
-        index < 2 && 'lg:border-b border-gray-200'
+        'flex flex-col py-10 relative group/feature border-gray-200',
+        // Mobile borders (single column) - all items get left, top border; last gets bottom
+        'border-l border-t',
+        index === 3 && 'border-b md:border-b-0',
+        // Desktop borders (2x2 grid)
+        'md:border-t-0 md:border-r',
+        (index === 0 || index === 2) && 'md:border-l',
+        index < 2 && 'md:border-b'
       )}
     >
       {index < 2 && (
@@ -26,13 +31,13 @@ const Feature = ({ title, description, icon, index }: FeatureProps) => {
       <div className="mb-4 relative z-10 px-10 text-blue-600">
         {icon}
       </div>
-      <div className="text-lg font-bold mb-2 relative z-10 px-10">
+      <div className="text-xl font-heading font-semibold mb-2 relative z-10 px-10">
         <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-gray-300 group-hover/feature:bg-blue-500 transition-all duration-200 origin-center" />
-        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-gray-800">
+        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-gray-800 font-heading">
           {title}
         </span>
       </div>
-      <p className="text-sm text-gray-600 max-w-xs relative z-10 px-10">
+      <p className="text-base font-heading text-gray-600 max-w-xs relative z-10 px-10 leading-relaxed">
         {description}
       </p>
     </div>

@@ -35,21 +35,21 @@ const TestimonialsColumn = ({
           <React.Fragment key={index}>
             {testimonials.map(({ text, image, name, role }, i) => (
               <div
-                className="p-8 rounded-3xl border border-gray-200 shadow-lg bg-white hover:shadow-xl hover:border-blue-300 transition-all duration-300 max-w-xs w-full"
+                className="p-8 rounded-3xl border border-gray-200 shadow-lg bg-white hover:shadow-xl hover:border-blue-300 transition-all duration-300 max-w-xs w-full flex flex-col"
                 key={i}
               >
-                <div className="text-gray-700 leading-relaxed">{text}</div>
-                <div className="flex items-center gap-3 mt-5">
+                <div className="text-gray-700 leading-relaxed mb-6 flex-grow font-heading">{text}</div>
+                <div className="flex items-center gap-3 mt-auto">
                   <img
                     width={40}
                     height={40}
                     src={image}
                     alt={name}
-                    className="h-10 w-10 rounded-full object-cover"
+                    className="h-10 w-10 rounded-full object-cover flex-shrink-0"
                   />
                   <div className="flex flex-col">
-                    <div className="font-semibold tracking-tight leading-5 text-gray-900">{name}</div>
-                    <div className="leading-5 text-gray-600 tracking-tight text-sm">{role}</div>
+                    <div className="font-semibold tracking-tight leading-5 text-gray-900 font-heading">{name}</div>
+                    <div className="leading-5 text-gray-600 tracking-tight text-sm font-heading">{role}</div>
                   </div>
                 </div>
               </div>
@@ -134,15 +134,15 @@ export default function TestimonialsAnimated() {
           className="flex flex-col items-center justify-center max-w-[540px] mx-auto mb-10"
         >
           <div className="flex justify-center">
-            <div className="border border-blue-500 text-blue-600 py-1 px-4 rounded-lg text-sm font-medium">
+            <div className="border border-blue-500 text-blue-600 py-1 px-4 rounded-lg text-sm font-medium font-heading">
               Testimonials
             </div>
           </div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-5 text-center text-gray-900">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-5 text-center text-gray-900 font-heading">
             What our students say
           </h2>
-          <p className="text-center mt-5 text-gray-600">
+          <p className="text-center mt-5 text-gray-600 font-heading">
             Real stories from Utah pilots who trained with us.
           </p>
         </motion.div>

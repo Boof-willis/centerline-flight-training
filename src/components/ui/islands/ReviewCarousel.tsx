@@ -100,31 +100,15 @@ export default function ReviewCarousel() {
       </div>
 
       {/* Review Text */}
-      <div className="relative mb-6 min-h-[120px]">
-        {reviews.map((review, index) => (
-          <p
-            key={index}
-            className={`absolute top-0 left-0 right-0 text-2xl leading-relaxed text-gray-800 font-normal transition-all duration-500 ${
-              currentReview === index ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-            }`}
-          >
-            "{review.text}"
-          </p>
-        ))}
+      <div className="mb-8">
+        <p className="text-2xl leading-relaxed text-gray-800 font-normal transition-opacity duration-500 min-h-[80px]">
+          "{reviews[currentReview].text}"
+        </p>
       </div>
 
       {/* Author */}
-      <div className="relative mb-8 min-h-[30px]">
-        {reviews.map((review, index) => (
-          <div
-            key={index}
-            className={`absolute top-0 left-0 right-0 transition-all duration-500 ${
-              currentReview === index ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2.5'
-            }`}
-          >
-            <span className="text-base text-gray-800 font-medium">{review.author}</span>
-          </div>
-        ))}
+      <div className="mb-8">
+        <span className="text-base text-gray-800 font-medium">{reviews[currentReview].author}</span>
       </div>
 
       {/* Profile Pictures */}

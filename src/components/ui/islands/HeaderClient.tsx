@@ -23,7 +23,7 @@ export default function HeaderClient() {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-[1000] py-4 transition-colors duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'} md:bg-transparent md:shadow-none`}
+    <header className={`fixed md:absolute top-0 left-0 right-0 z-[1000] py-4 transition-colors duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'} md:bg-transparent md:shadow-none`}
     >
       <nav className="flex justify-between items-center w-full px-8 max-w-[1200px] mx-auto relative z-[1001]">
         <div className="flex items-center gap-4">

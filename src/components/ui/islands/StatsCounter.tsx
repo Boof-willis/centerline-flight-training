@@ -53,22 +53,22 @@ function StatItem({ number, label }: StatItemProps) {
   };
 
   return (
-    <div ref={elementRef} className="text-left pt-12 relative border-t-2 border-gray-300">
+    <div ref={elementRef} className="text-left pt-8 md:pt-12 relative border-t-2 border-gray-300">
       <div
-        className={`font-heading text-[40px] md:text-5xl font-medium text-gray-800 leading-none mb-2 transition-all duration-600 ${
+        className={`font-heading text-[40px] md:text-5xl font-medium text-gray-800 leading-none mb-3 transition-all duration-600 ${
           hasAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
         }`}
       >
         {displayNumber}
       </div>
-      <div className="text-[16px] text-gray-800 font-normal leading-tight">{label}</div>
+      <div className="text-[14px] md:text-[16px] text-gray-800 font-normal leading-snug">{label}</div>
     </div>
   );
 }
 
 export default function StatsCounter() {
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 md:gap-12">
       <StatItem number="15+" label="Years of experience" />
       <StatItem number="200+" label="Pilots trained" />
       <StatItem number="500+" label="Flight hours logged" />

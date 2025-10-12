@@ -85,40 +85,53 @@ export default function AircraftShowcase() {
     <div className="max-w-[1200px] mx-auto px-8 py-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
         {/* Left Column: Scrolling Text Cards */}
-        <div className="space-y-[50vh]">
+        <div className="space-y-[100px] lg:space-y-[30vh]">
           {aircraft.map((plane) => (
             <div
               key={plane.id}
               data-aircraft={plane.id}
               ref={(el) => (sectionRefs.current[plane.id] = el)}
-              className="min-h-[100vh] flex flex-col justify-center"
+              className="lg:min-h-[100vh] flex flex-col justify-center"
             >
-              {/* Mobile: show image inline */}
-              <div className="mb-6 lg:hidden">
+              {/* Mobile: Simple Layout */}
+              <div className="lg:hidden">
                 <img
                   src={plane.image}
                   alt={plane.title}
-                  className="h-60 w-full object-cover rounded-2xl sm:h-72"
+                  className="w-full h-[300px] object-cover rounded-3xl mb-6"
                   loading="lazy"
                 />
+                <h2 className="text-[36px] sm:text-[40px] font-medium text-white mb-6 leading-tight font-heading">
+                  {plane.title}
+                </h2>
+                <p className="mb-6 leading-relaxed text-base text-white font-heading">
+                  {plane.primaryDesc}
+                  {plane.secondaryDesc && (
+                    <span className="text-gray-400"> {plane.secondaryDesc}</span>
+                  )}
+                </p>
+                <div className="text-lg font-semibold text-white mb-6 font-heading">{plane.price}</div>
+                <a href="#contact" className="cta-button">
+                  Book Discovery Flight
+                </a>
               </div>
 
-              <h2 className="text-5xl font-bold text-white mb-8 leading-tight tracking-tight">
-                {plane.title}
-              </h2>
-              <div className="mb-8 leading-relaxed">
-                <p className="text-xl text-white mb-2">{plane.primaryDesc}</p>
-                {plane.secondaryDesc && (
-                  <p className="text-lg text-gray-400">{plane.secondaryDesc}</p>
-                )}
+              {/* Desktop: Clean Layout with Animations */}
+              <div className="hidden lg:block">
+                <h2 className="text-[36px] sm:text-[40px] lg:text-[52px] font-medium text-white mb-6 leading-tight font-heading">
+                  {plane.title}
+                </h2>
+                <p className="mb-6 leading-relaxed text-base text-white font-heading">
+                  {plane.primaryDesc}
+                  {plane.secondaryDesc && (
+                    <span className="text-gray-400"> {plane.secondaryDesc}</span>
+                  )}
+                </p>
+                <div className="text-lg font-semibold text-white mb-6 font-heading">{plane.price}</div>
+                <a href="#contact" className="cta-button">
+                  Book Discovery Flight
+                </a>
               </div>
-              <div className="text-2xl font-semibold text-white mb-8">{plane.price}</div>
-              <a
-                href="#contact"
-                className="inline-block bg-white text-black py-3.5 px-8 rounded-lg font-semibold transition-all hover:bg-gray-100 hover:-translate-y-0.5 w-fit"
-              >
-                Book Now
-              </a>
             </div>
           ))}
         </div>
