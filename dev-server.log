@@ -456,3 +456,203 @@
 12:28:20 [404] /images/aircraft/da20-eclipse-hangar.jpg 1ms
 12:28:21 [404] /images/aircraft/da20-eclipse-hangar.jpg 0ms
 12:29:07 [404] /images/aircraft/da20-eclipse-hangar.jpg 1ms
+12:38:00 [404] /images/aircraft/da20-eclipse-hangar.jpg 3ms
+12:38:02 [200] / 7ms
+12:38:02 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+12:38:02 [404] /images/aircraft/da20-eclipse-hangar.jpg 0ms
+12:38:03 [404] /images/aircraft/da20-eclipse-hangar.jpg 2ms
+12:46:35 [watch] src/components/ui/BenefitsBar.astro
+12:46:35 [200] / 2ms
+12:46:35 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+12:46:44 [watch] src/components/ui/BenefitsBar.astro
+12:46:45 [200] / 1ms
+12:46:45 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+12:49:27 [watch] src/components/ui/BenefitsBar.astro
+12:49:28 [200] / 2ms
+12:49:28 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+12:49:35 [watch] src/components/ui/BenefitsBar.astro
+12:49:36 [200] / 1ms
+12:49:36 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+12:58:27 [watch] src/components/ui/BenefitsBar.astro
+12:58:28 [200] / 3ms
+12:58:28 [404] /.well-known/appspecific/com.chrome.devtools.json 2ms
+12:59:39 [watch] src/components/ui/BenefitsBar.astro
+12:59:40 [200] / 5ms
+12:59:40 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+13:00:49 [200] / 7ms
+13:00:49 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+13:03:56 [watch] src/components/ui/BenefitsBar.astro
+13:03:57 [200] / 3ms
+13:03:57 [200] / 2ms
+13:03:57 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+13:04:01 [watch] src/components/ui/BenefitsBar.astro
+13:04:02 [200] / 2ms
+13:04:02 [200] / 7ms
+13:04:02 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+13:05:07 [watch] src/components/ui/BenefitsBar.astro
+13:05:07 [200] / 1ms
+13:05:08 [200] / 4ms
+13:05:08 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+13:05:12 [watch] src/components/ui/BenefitsBar.astro
+13:05:12 [200] / 1ms
+13:05:13 [200] / 3ms
+13:05:13 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+13:13:41 [watch] src/components/ui/BenefitsBar.astro
+13:13:42 [200] / 2ms
+13:13:42 [200] / 3ms
+13:13:42 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+13:13:46 [watch] src/components/ui/BenefitsBar.astro
+13:13:46 [200] / 2ms
+13:13:47 [200] / 3ms
+13:13:47 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+13:16:50 [watch] /src/styles/global.css
+13:16:57 [watch] /src/styles/global.css
+13:19:49 [watch] src/components/ui/BenefitsBar.astro
+13:19:49 [200] / 2ms
+13:19:50 [200] / 4ms
+13:19:50 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+13:19:56 [watch] src/components/ui/BenefitsBar.astro
+13:19:57 [200] / 1ms
+13:19:57 [200] / 2ms
+13:19:57 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+13:20:46 [watch] src/components/ui/BenefitsBar.astro
+13:20:46 [200] / 1ms
+13:20:47 [200] / 3ms
+13:20:47 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+13:20:50 [watch] src/components/ui/BenefitsBar.astro
+13:20:50 [200] / 1ms
+13:20:51 [200] / 2ms
+13:20:51 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+13:25:20 [watch] src/pages/index.astro
+13:25:20 [200] / 3ms
+13:25:21 [200] / 3ms
+13:25:21 [404] /.well-known/appspecific/com.chrome.devtools.json 2ms
+13:25:33 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+13:25:44 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+13:25:44 [watch] src/pages/index.astro
+13:25:44 [200] / 1ms
+13:25:44 [200] / 3ms
+13:25:44 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+13:27:21 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+13:27:28 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+13:28:01 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+13:28:06 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+13:28:32 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+13:28:37 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+13:28:56 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+13:29:01 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+13:30:15 [404] /.well-known/appspecific/com.chrome.devtools.json 2ms
+13:41:18 [404] /.well-known/appspecific/com.chrome.devtools.json 8ms
+13:45:15 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+13:45:21 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+13:45:29 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+13:45:37 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+13:45:47 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+13:54:21 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+13:54:30 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+14:04:39 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+14:04:45 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+14:08:44 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+14:08:52 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+14:09:29 [404] /.well-known/appspecific/com.chrome.devtools.json 3ms
+14:11:16 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+14:11:35 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+14:11:41 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+14:15:35 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+14:15:42 [watch] /src/components/ui/islands/CareerCards.tsx, /src/styles/global.css
+14:18:55 [watch] src/components/ui/BenefitsBar.astro
+14:18:55 [200] / 1ms
+14:18:55 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+14:18:56 [200] / 6ms
+14:18:56 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:19:10 [watch] /src/components/ui/islands/StatsCounter.tsx, /src/styles/global.css
+14:19:17 [watch] /src/components/ui/islands/StatsCounter.tsx, /src/styles/global.css
+14:19:26 [watch] /src/components/ui/islands/StatsCounter.tsx, /src/styles/global.css
+14:19:26 [watch] src/components/ui/BenefitsBar.astro
+14:19:26 [200] / 6ms
+14:19:26 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+14:19:27 [200] / 3ms
+14:19:27 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+14:20:33 [watch] src/components/ui/BenefitsBar.astro
+14:20:33 [200] / 2ms
+14:20:33 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:20:33 [200] / 25ms
+14:20:33 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:20:38 [watch] src/components/ui/BenefitsBar.astro
+14:20:39 [200] / 1ms
+14:20:39 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:20:39 [200] / 6ms
+14:20:39 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+14:20:47 [200] / 3ms
+14:20:47 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+14:21:24 [watch] src/components/ui/BenefitsBar.astro
+14:21:25 [200] / 2ms
+14:21:25 [200] / 4ms
+14:21:25 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+14:21:25 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:21:31 [watch] src/components/ui/BenefitsBar.astro
+14:21:31 [200] / 1ms
+14:21:31 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:21:32 [200] / 2ms
+14:21:32 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:21:39 [200] / 4ms
+14:21:39 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:22:47 [watch] src/components/ui/BenefitsBar.astro
+14:22:47 [200] / 2ms
+14:22:47 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:22:48 [200] / 3ms
+14:22:48 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:22:56 [watch] src/components/ui/BenefitsBar.astro
+14:22:56 [200] / 2ms
+14:22:56 [200] / 2ms
+14:22:56 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+14:22:56 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+14:28:46 [watch] /src/styles/global.css
+14:28:55 [watch] /src/styles/global.css
+14:31:56 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:32:08 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:32:10 [200] / 3ms
+14:32:13 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+14:33:15 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:33:23 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:33:58 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:34:07 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:35:13 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+14:35:22 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+14:35:32 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+14:35:43 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+14:36:56 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+14:37:11 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+14:37:22 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+14:41:43 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:41:53 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:42:17 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:42:23 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:43:57 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:44:06 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:45:15 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:45:22 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:46:34 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:46:41 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:48:40 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:48:50 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:49:05 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:49:15 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:53:40 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:53:54 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:54:01 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:54:45 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:55:02 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:55:08 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:55:14 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:55:25 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:55:39 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:55:45 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:56:50 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:56:57 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:58:13 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+14:59:10 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+15:01:25 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+15:01:32 [watch] /src/components/ui/islands/HeaderClient.tsx, /src/styles/global.css
+15:06:21 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+15:06:26 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css

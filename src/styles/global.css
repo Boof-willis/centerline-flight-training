@@ -60,19 +60,20 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   background: white;
   color: #1f2937;
-  padding: 0.875rem 1rem;
-  padding-right: 0.875rem;
+  padding: 0 4px 0 24px;
   border: none;
-  border-radius: 100px;
+  border-radius: 24px;
   font-weight: 600;
   font-size: 1rem;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  height: 48px;
+  min-height: 48px;
 }
 
 .cta-button::after {
