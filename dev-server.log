@@ -794,3 +794,32 @@
 16:44:29 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
 16:45:29 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
 16:45:35 [watch] /src/components/ui/islands/AircraftShowcase.tsx, /src/styles/global.css
+16:56:46 [200] / 2ms
+16:56:47 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+09:44:50 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+09:45:00 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+09:57:53 [200] / 52ms
+09:57:53 [404] /.well-known/appspecific/com.chrome.devtools.json 2ms
+10:07:20 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+10:07:29 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+10:09:33 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+10:09:43 [watch] /src/components/ui/islands/HeroClient.tsx, /src/styles/global.css
+10:25:43 [watch] src/components/ui/BenefitsBar.astro
+10:25:43 [200] / 2ms
+10:25:43 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+10:25:54 [watch] /src/components/ui/islands/VideoPlayer.tsx, /src/styles/global.css
+10:25:54 [watch] src/components/ui/BenefitsBar.astro
+10:25:54 [200] / 3ms
+10:25:54 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+10:31:36 [watch] src/pages/index.astro
+10:31:36 [200] / 2ms
+10:31:36 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+10:31:46 [watch] src/pages/index.astro
+10:31:47 [200] / 2ms
+10:31:47 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+10:34:30 [watch] src/pages/index.astro
+10:34:31 [200] / 2ms
+10:34:31 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+10:34:38 [watch] src/pages/index.astro
+10:34:38 [200] / 1ms
+10:34:38 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms

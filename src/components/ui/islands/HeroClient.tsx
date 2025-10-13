@@ -65,10 +65,10 @@ export default function HeroClient() {
           className="absolute top-0 left-0 right-0 bottom-0 w-full h-full z-[1] opacity-0 scale-110"
           style={{
             backgroundImage:
-              "url('https://cdn.prod.website-files.com/68e55206dd9a99d26d08a73b/68e55283fedb6e98e0bc940e_Centerline%20Hero.png')",
+              "url('/images/hero/Hero Background Desktop - Airplane Over Lake.png')",
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center top',
+            backgroundPosition: 'center 30%',
             animation: 'heroBackgroundZoomOut 3s cubic-bezier(0.12, 0.23, 0.5, 1) forwards',
             willChange: 'transform',
           }}

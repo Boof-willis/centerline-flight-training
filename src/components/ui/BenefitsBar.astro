@@ -1,5 +1,6 @@
 ---
 import StatsCounter from './islands/StatsCounter';
+import VideoPlayer from './islands/VideoPlayer';
 ---
 
 <section class="bg-white pt-16 md:pt-[120px] pb-20 md:pb-[100px] relative z-10">
@@ -11,13 +12,12 @@ import StatsCounter from './islands/StatsCounter';
           <span class="text-gray-500">Part 61 training on your schedule. Keep your job. Weekend & evening flights. Transparent pricing from $140.</span>
         </h2>
       </div>
-              <div class="relative rounded-[16px] overflow-hidden w-full md:w-[408px] h-[245px] flex-shrink-0">
-                <img
-                  src="/images/aircraft/DIAMOND DA20 ECLIPSE.png"
-                  alt="Diamond DA20 Eclipse aircraft in hangar at Centerline Flight Training"
-                  class="w-full h-full object-cover"
-                />
-      </div>
+      <VideoPlayer 
+        client:load
+        videoSrc="/videos/Cole_Barton_Centerline_Aviation.mp4"
+        thumbnailSrc="/images/aircraft/DIAMOND DA20 ECLIPSE.png"
+        alt="Diamond DA20 Eclipse aircraft in hangar at Centerline Flight Training"
+      />
     </div>
     <StatsCounter client:visible />
   </div>
