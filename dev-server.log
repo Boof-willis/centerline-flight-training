@@ -823,3 +823,11 @@
 10:34:38 [watch] src/pages/index.astro
 10:34:38 [200] / 1ms
 10:34:38 [404] /.well-known/appspecific/com.chrome.devtools.json 0ms
+10:38:59 [200] / 44ms
+10:38:59 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+10:57:16 [watch] src/components/ui/BenefitsBar.astro
+10:57:17 [200] / 5ms
+10:57:17 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
+10:57:30 [watch] src/components/ui/BenefitsBar.astro
+10:57:30 [200] / 4ms
+10:57:30 [404] /.well-known/appspecific/com.chrome.devtools.json 1ms
