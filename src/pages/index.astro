@@ -1,16 +1,35 @@
 ---
 import '@/styles/global.css';
-import HeaderClient from '@/components/ui/islands/HeaderClient';
-import HeroClient from '@/components/ui/islands/HeroClient';
-import BenefitsBar from '@/components/ui/BenefitsBar.astro';
-import CareerCards from '@/components/ui/islands/CareerCards';
-import ReviewCarousel from '@/components/ui/islands/ReviewCarousel';
-import TrainingPathway from '@/components/ui/islands/TrainingPathway';
-import AircraftShowcase from '@/components/ui/islands/AircraftShowcase';
-import TestimonialsAnimated from '@/components/ui/islands/TestimonialsAnimated';
-import Faq from '@/components/ui/islands/Faq';
-import CtaBand from '@/components/ui/CtaBand.astro';
-import Footer from '@/components/ui/Footer.astro';
+import HeaderRepair from '@/components/ui/islands/HeaderRepair';
+import FeatureSteps from '@/components/ui/islands/FeatureSteps';
+import TestimonialsColumns from '@/components/ui/islands/TestimonialsColumns';
+import HeroRepair from '@/components/ui/HeroRepair.astro';
+import IssueChooser from '@/components/ui/IssueChooser.astro';
+import PricingCard from '@/components/ui/PricingCard.astro';
+import StepsTimeline from '@/components/ui/StepsTimeline.astro';
+import FaqAccordion from '@/components/ui/FaqAccordion.astro';
+import FooterRepair from '@/components/ui/FooterRepair.astro';
+
+const whyChooseFeatures = [
+  {
+    step: "1",
+    title: "Roof-First Approach",
+    content: "We protect your roof integrity first—because a $500 repair shouldn't cause $5,000 in roof damage. No leaks, guaranteed. All repairs maintain your existing warranties.",
+    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop&q=80"
+  },
+  {
+    step: "2",
+    title: "NABCEP-Trained Technicians",
+    content: "NABCEP-certified means fewer return visits and accurate diagnosis the first time. We service all major brands—Tesla, SunPower, Enphase, SolarEdge, LG, Q-Cell, and more.",
+    image: "https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=800&h=600&fit=crop&q=80"
+  },
+  {
+    step: "3",
+    title: "Fast Local Response",
+    content: "Same-week diagnostics (often within 48 hours). Emergency slots available. We handle all utility paperwork and city permits—you don't lift a finger.",
+    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop&q=80"
+  }
+];
 ---
 
 <!DOCTYPE html>
@@ -18,144 +37,360 @@ import Footer from '@/components/ui/Footer.astro';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Centerline Flight Training - Utah's Premier Part-61 Flight School</title>
-    <meta name="description" content="Train on your schedule in Spanish Fork. Weekend & evening flights for working professionals. Modern hangared fleet, transparent pricing, pay-as-you-go from $140." />
+    <title>Solar Repair in Utah | R&R Solar</title>
+    <meta name="description" content="Fast, warranty-friendly solar repairs in Utah. Fix inverter errors, wiring, roof leaks, critter damage, and re-roof remove & reinstall. Book same-week diagnostics." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://repair.rrsolar.com/" />
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "R&R Solar",
+      "description": "Professional solar repair services in Utah",
+      "url": "https://repair.rrsolar.com",
+      "telephone": "+1-XXX-XXX-XXXX",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Utah",
+        "addressRegion": "UT",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Utah"
+      },
+      "serviceType": "Solar Repair Services",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Solar Repair Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Solar System Diagnostics"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Inverter Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Roof Leak Repair"
+            }
+          }
+        ]
+      }
+    }
+    </script>
   </head>
   <body class="overflow-x-hidden">
     <!-- Header -->
-    <HeaderClient client:load />
+    <HeaderRepair client:load />
 
-    <!-- Hero Section -->
-    <HeroClient client:load />
+    <main>
+      <!-- Hero Section -->
+      <HeroRepair />
 
-    <!-- Benefits Bar -->
-    <BenefitsBar />
-
-    <!-- Career Paths Section -->
-    <section class="py-20 bg-white">
-      <div class="max-w-[1200px] mx-auto px-8">
-        <h2 class="text-center text-[36px] sm:text-[40px] lg:text-[52px] font-medium font-heading mb-6 text-gray-800">Why Become a Pilot?</h2>
-        <p class="text-center max-w-[700px] mx-auto mb-12 text-lg text-gray-600 font-heading">
-          Whether you're pursuing an aviation career or flying for fun, we'll guide you from discovery flight to your goals.
-        </p>
-        <CareerCards client:visible />
-      </div>
-    </section>
-
-    <!-- Review Carousel Section -->
-    <section class="py-20 bg-white">
-      <div class="max-w-[1200px] mx-auto px-8">
-        <ReviewCarousel client:visible />
-      </div>
-    </section>
-
-    <!-- Training Pathway Section -->
-    <section id="programs" class="py-20 bg-white">
-      <div class="max-w-[1200px] mx-auto px-8">
-        <h2 class="text-center text-[36px] sm:text-[40px] lg:text-[52px] font-medium font-heading mb-6 text-gray-800">Your Training Pathway</h2>
-        <p class="text-center max-w-[700px] mx-auto mb-12 text-lg text-gray-600 font-heading">
-          Part 61 flexible training means you control the pace. Train as often as you want while keeping your current job.
-        </p>
-        <TrainingPathway client:visible />
-        <div class="text-center mt-8">
-          <a href="#discovery" class="cta-button !bg-[#F2F2F2] !border !border-[#E1E1E1] !shadow-none !h-[48px]">Start Your Training Journey</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Aircraft Showcase Section -->
-    <section id="discovery" class="bg-black py-20 min-h-screen">
-      <AircraftShowcase client:visible />
-    </section>
-
-    <!-- Why Us Section -->
-    <section id="why-us" class="py-20 bg-white">
-      <div class="max-w-[1200px] mx-auto px-8">
-        <!-- Header -->
-        <div class="text-center mb-12">
-          <h2 class="text-[36px] sm:text-[40px] lg:text-[52px] font-medium font-heading text-gray-800">Why Utah Students Choose Centerline</h2>
-        </div>
-
-            <!-- Content -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <div class="h-[400px] rounded-xl overflow-hidden">
-                  <img
-                    src="/images/aircraft/why us.jpg"
-                    alt="Diamond aircraft in hangar at Centerline Flight Training"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-          
-          <div>
-            <ul class="list-none space-y-6">
-              <li class="border-b border-gray-200 pb-6">
-                <h3 class="text-xl font-semibold mb-2 text-gray-900 font-heading">Your Schedule, Your Pace</h3>
-                <p class="text-gray-600 font-heading">Morning, evening, weekend availability—train as often as you want while keeping your job</p>
-              </li>
-              
-              <li class="border-b border-gray-200 pb-6">
-                <h3 class="text-xl font-semibold mb-2 text-gray-900 font-heading">Pay-As-You-Go + Financing</h3>
-                <p class="text-gray-600 font-heading">No large upfront payments required—flexible payment plans for all budgets</p>
-              </li>
-              
-              <li class="pb-6">
-                <h3 class="text-xl font-semibold mb-2 text-gray-900 font-heading">Newer Aircraft Only</h3>
-                <p class="text-gray-600 font-heading">2019+ Diamond DA20 & DA40 with modern Garmin glass cockpits—newer than competing schools</p>
-              </li>
-            </ul>
+      <!-- Issue Chooser Section -->
+      <section id="issue-chooser" class="py-20 bg-white">
+        <div class="max-w-[1200px] mx-auto px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-[36px] sm:text-[40px] lg:text-[52px] font-medium font-heading mb-6 text-gray-800">
+              What's Wrong With Your Solar System?
+            </h2>
+            <p class="text-center max-w-[700px] mx-auto mb-12 text-lg text-gray-600 font-heading">
+              Click the issue that best describes your problem. We'll help you get back to generating clean energy.
+            </p>
           </div>
+          <IssueChooser />
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Testimonials Section -->
-    <section class="bg-gray-50 py-20">
-      <TestimonialsAnimated client:visible />
-    </section>
-
-    <!-- Instructors and Fleet Section -->
-    <section id="fleet" class="py-20 bg-white">
-      <div class="max-w-[1200px] mx-auto px-8">
-        <h2 class="text-center text-4xl font-bold mb-12 text-gray-800 font-heading">Meet Our Team & Fleet</h2>
-
-        <!-- Team Photo -->
-        <div class="mb-16">
-          <h3 class="text-center mb-8 text-gray-800 text-2xl font-heading">Your Flight Instructors</h3>
-          <div class="w-full max-w-[900px] mx-auto rounded-xl overflow-hidden">
-            <img
-              src="/images/people/Team Photo.jpg"
-              alt="Centerline Flight Training Team - Flight Instructors and Staff"
-              class="w-full h-auto object-cover"
+      <!-- Pricing Section -->
+      <section class="py-20 bg-white">
+        <div class="max-w-[1200px] mx-auto px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-[36px] sm:text-[40px] lg:text-[52px] font-medium font-heading mb-6 text-gray-800">
+              Transparent Pricing
+            </h2>
+            <p class="text-center max-w-[700px] mx-auto mb-12 text-lg text-gray-600 font-heading">
+              No hidden fees. Diagnostic costs apply to your repair.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8 pt-8">
+            <PricingCard 
+              title="Diagnostics"
+              price="$149-$249"
+              description="Applied to repair cost"
+              features={["System inspection", "Fault identification", "Detailed report"]}
+            />
+            <PricingCard 
+              title="Most Repairs"
+              price="$350-$1,200"
+              description="Typical range: $1,800-$4,500 depending on system size"
+              features={["Inverter fixes", "Wiring repairs", "Component replacement"]}
+              featured={true}
+            />
+            <PricingCard 
+              title="Remove & Reinstall"
+              price="Custom Quote"
+              description="For re-roofing projects"
+              features={["System removal", "Safe storage", "Professional reinstall"]}
             />
           </div>
-          <p class="text-center mt-6 text-gray-600 max-w-[700px] mx-auto font-heading">
-            Our CFIs advance to SkyWest, FedEx, and corporate aviation—learn from pilots with real career experience who know exactly what it takes to succeed.
+          <div class="mt-8 text-center p-4 bg-blue-50 rounded-xl border border-blue-100 max-w-2xl mx-auto">
+            <p class="text-sm text-gray-700 font-heading">
+              💡 <strong>Money-back guarantee:</strong> If our diagnostic finds no issue, you only pay $99 (diagnostic fee fully credited toward any repair).
+            </p>
+          </div>
+          <div class="text-center mt-6">
+            <p class="text-sm text-gray-500 font-heading">
+              *Final pricing varies by system size, roof type, and repair complexity
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose R&R Section -->
+      <section id="why-us" class="py-20 bg-white">
+        <div class="max-w-[1200px] mx-auto px-8">
+          <FeatureSteps 
+            features={whyChooseFeatures} 
+            title="Why Utah Homeowners Choose R&R Solar"
+            autoPlayInterval={4000}
+            client:load
+          />
+        </div>
+      </section>
+
+      <!-- Reviews Section -->
+      <TestimonialsColumns client:load />
+
+      <!-- How It Works Section -->
+      <section id="programs" class="py-20 bg-white">
+        <div class="max-w-[1200px] mx-auto px-8">
+          <h2 class="text-center text-[36px] sm:text-[40px] lg:text-[52px] font-medium font-heading mb-6 text-gray-800">How It Works</h2>
+          <p class="text-center max-w-[700px] mx-auto mb-12 text-lg text-gray-600 font-heading">
+            Simple, transparent process from diagnosis to repair
           </p>
+          <StepsTimeline />
+          <div class="text-center mt-8">
+            <a href="#issue-chooser" class="cta-button !bg-[#F2F2F2] !border !border-[#E1E1E1] !shadow-none !h-[48px]">Schedule Diagnostic</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="bg-white py-24">
-      <div class="max-w-[1000px] mx-auto px-8">
-        <div class="text-center mb-16">
-          <p class="text-gray-500 text-sm uppercase tracking-wider mb-4">FAQ</p>
-          <h2 class="text-4xl md:text-[52px] font-normal text-gray-900 leading-tight font-heading">
-            Everything you need to know
-          </h2>
+      <!-- Service Area Section -->
+      <section class="py-20 bg-white">
+        <div class="max-w-[1200px] mx-auto px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-[36px] sm:text-[40px] lg:text-[52px] font-medium font-heading mb-6 text-gray-800">We Serve All of Utah</h2>
+            <p class="text-center max-w-[700px] mx-auto mb-12 text-lg text-gray-600 font-heading">
+              Local technicians, fast response times
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div class="rounded-2xl overflow-hidden shadow-lg h-[400px] w-full">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040603.7849326767!2d-113.4876!3d39.3209876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874c6bc78f13051b%3A0xbf5d49a6dc17eb3!2sUtah!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                  width="100%" 
+                  height="100%" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Utah Service Area Map"
+                ></iframe>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-900 mb-6 font-heading">Primary Service Areas</h3>
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-[#498dcb] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                  </svg>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 font-heading">Northern Utah</h4>
+                    <p class="text-gray-600 font-heading">Salt Lake, Davis, Weber, Cache, Utah Counties</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-[#498dcb] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                  </svg>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 font-heading">Central Utah</h4>
+                    <p class="text-gray-600 font-heading">Wasatch, Summit, Tooele, Juab Counties</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-[#498dcb] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                  </svg>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 font-heading">Southern Utah</h4>
+                    <p class="text-gray-600 font-heading">Washington, Iron, Kane, Garfield Counties</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-6 space-y-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-lg">⚡</span>
+                  <p class="text-sm text-gray-700 font-heading"><strong>Standard Response Time:</strong> 1-2 business days</p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg">⚡</span>
+                  <p class="text-sm text-gray-700 font-heading"><strong>No extra travel fees</strong> within our primary service areas</p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg">⚡</span>
+                  <p class="text-sm text-gray-700 font-heading"><strong>Extended areas</strong> may include nominal travel fee—always quoted upfront</p>
+                </div>
+              </div>
+              <div class="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-100">
+                <p class="text-sm text-gray-700 font-heading">
+                  <strong class="text-[#498dcb]">Outside these areas?</strong> Contact us anyway—we may still be able to help or can recommend a trusted partner.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <Faq client:visible />
-      </div>
-    </section>
+      </section>
 
-    <!-- CTA Band -->
-    <CtaBand />
+      <!-- FAQ Section -->
+      <section id="faq" class="bg-white py-24">
+        <div class="max-w-[1000px] mx-auto px-8">
+          <div class="text-center mb-16">
+            <p class="text-gray-500 text-sm uppercase tracking-wider mb-4 font-heading">FAQ</p>
+            <h2 class="text-4xl md:text-[52px] font-normal text-gray-900 leading-tight font-heading">
+              Everything you need to know
+            </h2>
+          </div>
+          <FaqAccordion />
+        </div>
+      </section>
+
+      <!-- CTA Band -->
+      <section id="cta-band" class="relative py-32 text-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div 
+          class="absolute inset-0 z-0"
+          style="background-image: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1600&h=800&fit=crop&q=80'); background-size: cover; background-position: center;"
+        ></div>
+        <div class="absolute inset-0 bg-black/70 z-0"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-[1200px] mx-auto px-8">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white font-heading">Get Your System Back Online</h2>
+          <p class="text-xl mb-10 text-white/90 font-heading max-w-[600px] mx-auto">
+            Licensed & Insured • Warranty-friendly • Local Utah Techs
+          </p>
+          <div class="flex gap-4 justify-center flex-wrap">
+            <a href="tel:+13855398892" class="cta-button font-heading">Call (385) 539-8892</a>
+            <a href="#issue-chooser" class="secondary-button font-heading">Schedule Diagnostic</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
 
     <!-- Footer -->
-    <Footer />
+    <FooterRepair />
+
+    <!-- Analytics and Event Tracking Script -->
+    <script>
+      // Parse URL parameters for tracking
+      function getUrlParams() {
+        const params = new URLSearchParams(window.location.search);
+        return {
+          gclid: params.get('gclid'),
+          gbraid: params.get('gbraid'),
+          wbraid: params.get('wbraid'),
+          utm_source: params.get('utm_source'),
+          utm_medium: params.get('utm_medium'),
+          utm_campaign: params.get('utm_campaign'),
+          utm_term: params.get('utm_term'),
+          utm_content: params.get('utm_content')
+        };
+      }
+
+      // Populate hidden form fields
+      function populateTrackingFields() {
+        const params = getUrlParams();
+        const form = document.getElementById('repair-form');
+        if (form) {
+          Object.entries(params).forEach(([key, value]) => {
+            const input = form.querySelector(`input[name="${key}"]`);
+            if (input && value) {
+              input.value = value;
+            }
+          });
+          
+          // Set landing page and referrer
+          const landingPageInput = form.querySelector('input[name="landing_page"]');
+          const referrerInput = form.querySelector('input[name="referrer"]');
+          if (landingPageInput) landingPageInput.value = window.location.href;
+          if (referrerInput) referrerInput.value = document.referrer;
+        }
+      }
+
+      // Track scroll depth
+      let scrollDepth50Fired = false;
+      function trackScrollDepth() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        
+        if (scrollPercent >= 50 && !scrollDepth50Fired) {
+          scrollDepth50Fired = true;
+          window.dispatchEvent(new Event('ScrollDepth50'));
+        }
+      }
+
+      // Track phone call clicks
+      function trackPhoneCalls() {
+        const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+        phoneLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            window.dispatchEvent(new Event('PhoneCallClick'));
+          });
+        });
+      }
+
+      // Track form submissions
+      function trackFormSubmissions() {
+        const form = document.getElementById('repair-form');
+        if (form) {
+          form.addEventListener('submit', (e) => {
+            // Let the form submit normally, then track
+            setTimeout(() => {
+              window.dispatchEvent(new Event('Lead'));
+            }, 100);
+          });
+        }
+      }
+
+      // Initialize tracking when DOM is loaded
+      document.addEventListener('DOMContentLoaded', () => {
+        populateTrackingFields();
+        trackPhoneCalls();
+        trackFormSubmissions();
+        window.addEventListener('scroll', trackScrollDepth);
+      });
+
+      // GA4 Placeholder - Replace with actual GA4 code
+      // gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
   </body>
 </html>
-
