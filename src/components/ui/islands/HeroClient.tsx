@@ -98,8 +98,8 @@ export default function HeroClient() {
 
           {/* Buttons */}
           <div className="flex gap-4 flex-wrap mb-12 opacity-0 translate-y-5 animate-[fadeInUp_0.8s_ease_1.1s_forwards]">
-            <a href="#discovery" className="cta-button font-normal">
-              Book $140 Discovery Flight
+            <a href="#contact" className="cta-button font-normal">
+              Book a Free Consultation
             </a>
             <a href="#programs" className="secondary-button font-normal !hidden md:!inline-flex">
               Explore Career Paths

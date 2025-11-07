@@ -65,7 +65,7 @@ export default function TrainingPathway() {
       icon: <Target className="w-6 h-6" />,
     },
     {
-      title: 'Certified Flight Instructor (CFI)',
+      title: 'Certified Flight Instructor (CFI) (CFII)',
       description:
         'Build hours while getting paid to teach. Most airlines require 1,500 hours—instructing is the fastest way to build time.',
       icon: <GraduationCap className="w-6 h-6" />,

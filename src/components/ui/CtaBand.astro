@@ -2,11 +2,19 @@
 // CTA Band section
 ---
 
+<style>
+  @media (max-width: 768px) {
+  .cta-bg-image {
+    background-position: 40% center !important;
+  }
+}
+</style>
+
 <section class="relative py-32 text-center overflow-hidden">
   <!-- Background Image with Overlay -->
   <div 
-    class="absolute inset-0 z-0"
-    style="background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=1600&h=800&fit=crop&q=80'); background-size: cover; background-position: center;"
+    class="absolute inset-0 z-0 cta-bg-image"
+    style="background-image: url('https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/call%20to%20action%20banner%20(in%20flight).png'); background-size: cover; background-position: center;"
   ></div>
   <div class="absolute inset-0 bg-black/70 z-0"></div>
 

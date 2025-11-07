@@ -45,7 +45,14 @@ export default function ReviewCarousel() {
   const [currentReview, setCurrentReview] = useState(0);
   const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const manualClickRef = useRef(false);
+  const restartTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+  const isScrollingProgrammatically = useRef(false);
+  const minSwipeDistance = 50;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -65,7 +72,7 @@ export default function ReviewCarousel() {
   }, []);
 
   useEffect(() => {
-    if (isInView) {
+    if (isInView && !manualClickRef.current) {
       startCarousel();
     } else {
       stopCarousel();
@@ -74,7 +81,32 @@ export default function ReviewCarousel() {
     return () => stopCarousel();
   }, [isInView]);
 
+  // Sync scroll position on mobile when review changes programmatically (auto-advance)
+  useEffect(() => {
+    if (scrollContainerRef.current && !manualClickRef.current) {
+      const container = scrollContainerRef.current;
+      const containerWidth = container.clientWidth;
+      isScrollingProgrammatically.current = true;
+      container.scrollTo({
+        left: currentReview * containerWidth,
+        behavior: 'smooth',
+      });
+      // Reset flag after scroll completes
+      setTimeout(() => {
+        isScrollingProgrammatically.current = false;
+      }, 500);
+    }
+  }, [currentReview]);
+
   const startCarousel = () => {
+    // Clear any existing interval first
+    stopCarousel();
+    
+    // Don't start if we just had a manual click
+    if (manualClickRef.current) {
+      return;
+    }
+
     intervalRef.current = setInterval(() => {
       setCurrentReview((prev) => (prev + 1) % reviews.length);
     }, 4000);
@@ -85,13 +117,124 @@ export default function ReviewCarousel() {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
     }
+    if (restartTimeoutRef.current) {
+      clearTimeout(restartTimeoutRef.current);
+      restartTimeoutRef.current = null;
+    }
   };
 
   const handleProfileClick = (index: number) => {
+    // Prevent clicking the same review
+    if (index === currentReview) {
+      return;
+    }
+
+    // Stop the carousel immediately
     stopCarousel();
-    setCurrentReview(index);
+    
+    // Mark that we had a manual click
+    manualClickRef.current = true;
+    
+    // Update the review
+    navigateToReview(index);
+    
+    // Clear the manual click flag after a delay and restart carousel
     if (isInView) {
-      startCarousel();
+      restartTimeoutRef.current = setTimeout(() => {
+        manualClickRef.current = false;
+        if (isInView) {
+          startCarousel();
+        }
+      }, 4000); // Wait 4 seconds (full cycle) before restarting
+    }
+  };
+
+  const navigateToReview = (index: number) => {
+    setCurrentReview(index);
+    // Scroll to the review on mobile
+    if (scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      const containerWidth = container.clientWidth;
+      isScrollingProgrammatically.current = true;
+      container.scrollTo({
+        left: index * containerWidth,
+        behavior: 'smooth',
+      });
+      // Reset flag after scroll completes
+      setTimeout(() => {
+        isScrollingProgrammatically.current = false;
+      }, 500);
+    }
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    stopCarousel();
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+
+    const distance = touchStartX.current - touchEndX.current;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe && currentReview < reviews.length - 1) {
+      // Swipe left - go to next review
+      manualClickRef.current = true;
+      navigateToReview(currentReview + 1);
+      if (isInView) {
+        restartTimeoutRef.current = setTimeout(() => {
+          manualClickRef.current = false;
+          if (isInView) {
+            startCarousel();
+          }
+        }, 4000);
+      }
+    } else if (isRightSwipe && currentReview > 0) {
+      // Swipe right - go to previous review
+      manualClickRef.current = true;
+      navigateToReview(currentReview - 1);
+      if (isInView) {
+        restartTimeoutRef.current = setTimeout(() => {
+          manualClickRef.current = false;
+          if (isInView) {
+            startCarousel();
+          }
+        }, 4000);
+      }
+    }
+
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
+  // Handle scroll on mobile to update current review
+  const handleScroll = () => {
+    if (!scrollContainerRef.current || isScrollingProgrammatically.current) return;
+    
+    const container = scrollContainerRef.current;
+    const scrollLeft = container.scrollLeft;
+    const containerWidth = container.clientWidth;
+    const reviewIndex = Math.round(scrollLeft / containerWidth);
+    
+    if (reviewIndex !== currentReview && reviewIndex >= 0 && reviewIndex < reviews.length) {
+      setCurrentReview(reviewIndex);
+      manualClickRef.current = true;
+      stopCarousel();
+      
+      if (isInView) {
+        restartTimeoutRef.current = setTimeout(() => {
+          manualClickRef.current = false;
+          if (isInView) {
+            startCarousel();
+          }
+        }, 4000);
+      }
     }
   };
 
@@ -100,43 +243,95 @@ export default function ReviewCarousel() {
       ref={sectionRef}
       className="max-w-[800px] mx-auto text-center relative"
       onMouseEnter={stopCarousel}
-      onMouseLeave={() => isInView && startCarousel()}
+      onMouseLeave={() => {
+        if (isInView && !manualClickRef.current) {
+          startCarousel();
+        }
+      }}
     >
-      {/* Stars */}
-      <div className="mb-8">
-        {[...Array(5)].map((_, i) => (
-          <span key={i} className="text-yellow-400 text-2xl mx-0.5">
-            ★
-          </span>
-        ))}
+      {/* Desktop View - Single Review */}
+      <div className="hidden md:block">
+        {/* Stars */}
+        <div className="mb-8">
+          {[...Array(5)].map((_, i) => (
+            <span key={i} className="text-yellow-400 text-2xl mx-0.5">
+              ★
+            </span>
+          ))}
+        </div>
+
+        {/* Review Text */}
+        <div className="mb-8">
+          <p className="text-2xl leading-relaxed text-gray-800 font-normal transition-opacity duration-500 min-h-[80px]">
+            "{reviews[currentReview].text}"
+          </p>
+        </div>
+
+        {/* Author */}
+        <div className="mb-8">
+          <span className="text-base text-gray-800 font-medium">{reviews[currentReview].author}</span>
+        </div>
       </div>
 
-      {/* Review Text */}
-      <div className="mb-8">
-        <p className="text-2xl leading-relaxed text-gray-800 font-normal transition-opacity duration-500 min-h-[80px]">
-          "{reviews[currentReview].text}"
-        </p>
+      {/* Mobile View - Scrollable Reviews */}
+      <div
+        ref={scrollContainerRef}
+        className="md:hidden overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+        style={{
+          scrollSnapType: 'x mandatory',
+          WebkitOverflowScrolling: 'touch',
+        }}
+        onScroll={handleScroll}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        <div className="flex">
+          {reviews.map((review, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 w-full px-4 snap-center"
+              style={{ minWidth: '100%' }}
+            >
+              {/* Stars */}
+              <div className="mb-8">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-yellow-400 text-2xl mx-0.5">
+                    ★
+                  </span>
+                ))}
+              </div>
+
+              {/* Review Text */}
+              <div className="mb-8">
+                <p className="text-2xl leading-relaxed text-gray-800 font-normal min-h-[80px]">
+                  "{review.text}"
+                </p>
+              </div>
+
+              {/* Author */}
+              <div className="mb-8">
+                <span className="text-base text-gray-800 font-medium">{review.author}</span>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Author */}
-      <div className="mb-8">
-        <span className="text-base text-gray-800 font-medium">{reviews[currentReview].author}</span>
-      </div>
-
-      {/* Profile Initials */}
-      <div className="flex justify-center gap-4 items-center">
+      {/* Dots Indicator */}
+      <div className="flex justify-center gap-2 items-center">
         {reviews.map((review, index) => (
-          <div
+          <button
             key={index}
-            className={`rounded-full transition-all duration-300 cursor-pointer hover:scale-105 flex items-center justify-center font-semibold text-white ${
+            type="button"
+            className={`rounded-full transition-all duration-300 cursor-pointer ${
               currentReview === index 
-                ? 'w-[66px] h-[66px] scale-110 bg-gray-800 text-lg' 
-                : 'w-[60px] h-[60px] bg-gray-600 text-base'
+                ? 'w-3 h-3 bg-gray-800' 
+                : 'w-2.5 h-2.5 bg-gray-400 hover:bg-gray-500'
             }`}
             onClick={() => handleProfileClick(index)}
-          >
-            {getInitials(review.author)}
-          </div>
+            aria-label={`Go to review ${index + 1}`}
+          />
         ))}
       </div>
     </div>
