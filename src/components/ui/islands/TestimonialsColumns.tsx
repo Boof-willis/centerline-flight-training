@@ -1,98 +1,137 @@
-import { cn } from '@/lib/utils';
+"use client";
+import React from "react";
+import { motion } from "motion/react";
 
 interface Testimonial {
-  quote: string;
+  text: string;
   name: string;
-  title: string;
+  role: string;
 }
 
-const testimonials: Testimonial[] = [
-  {
-    quote:
-      "I recently completed my CFI and CFII at Centerline Aviation, finishing both within two months of starting the program. My instructor, Jack, was absolutely top-notch—professional, incredibly knowledgeable, and experienced.",
-    name: 'Jordan C.',
-    title: 'CFI & CFII Graduate',
-  },
-  {
-    quote:
-      "I did a Discovery Flight with Cole Barton from Centerline Aviation. He made sure I understood each part of the plane and how the controls worked. I felt very welcome and like they had a passion they were excited to share with me.",
-    name: 'Jordan L.',
-    title: 'Discovery Flight Student',
-  },
-  {
-    quote:
-      "The aircraft and the instructors are great. I've had 2 different instructors at Centerline, both have been awesome. The planes are in really good shape and Spanish Fork airport is a great place to learn at. Would recommend.",
-    name: 'Kevin F.',
-    title: 'Private Pilot Student',
-  },
-  {
-    quote:
-      "The hangared fleet was a game-changer. I trained through December-February with ZERO weather cancellations while friends at other schools lost weeks to snow delays.",
-    name: 'Marcus Chen',
-    title: 'SkyWest Pilot',
-  },
-  {
-    quote:
-      "As a working professional, the flexible scheduling was crucial. I flew before work twice a week and Saturdays. Got my PPL in 7 months without quitting my job.",
-    name: 'Jennifer Martinez',
-    title: 'Business Owner',
-  },
-  {
-    quote:
-      "Started at 47 years old as a bucket-list goal. The instructors never made me feel behind. Best investment I've ever made.",
-    name: 'Robert Williams',
-    title: 'Private Pilot',
-  },
-];
-
-const TestimonialCard = ({ quote, name, title }: Testimonial) => {
+export const TestimonialsColumn = (props: {
+  className?: string;
+  testimonials: Testimonial[];
+  duration?: number;
+}) => {
   return (
-    <div className="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm border border-gray-200 hover:shadow-xl transition-all duration-300 hover:border-blue-300">
-      {/* Gradient overlay on hover */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      
-      <div className="relative z-10">
-        {/* Quote icon */}
-        <div className="mb-4">
-          <svg
-            className="w-10 h-10 text-blue-500 opacity-20"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-          </svg>
-        </div>
-
-        {/* Quote text */}
-        <p className="text-gray-700 mb-6 leading-relaxed italic">{quote}</p>
-
-        {/* Author info */}
-        <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-semibold text-lg">
-            {name.charAt(0)}
-          </div>
-          <div>
-            <div className="font-semibold text-gray-900">{name}</div>
-            <div className="text-sm text-gray-600">{title}</div>
-          </div>
-        </div>
-
-        {/* Bottom accent line */}
-        <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-500 to-purple-600 group-hover:w-full transition-all duration-500" />
-      </div>
+    <div className={props.className}>
+      <motion.div
+        animate={{
+          translateY: "-50%",
+        }}
+        transition={{
+          duration: props.duration || 10,
+          repeat: Infinity,
+          ease: "linear",
+          repeatType: "loop",
+        }}
+        className="flex flex-col gap-6 pb-6 bg-background"
+      >
+        {[
+          ...new Array(2).fill(0).map((_, index) => (
+            <React.Fragment key={index}>
+              {props.testimonials.map(({ text, name, role }, i) => {
+                const initials = name.split(' ').map(n => n[0]).join('');
+                return (
+                  <div className="p-10 rounded-3xl border shadow-lg shadow-primary/10 max-w-xs w-full bg-white" key={i}>
+                    <div className="text-gray-600 font-heading leading-relaxed">{text}</div>
+                    <div className="flex items-center gap-2 mt-5">
+                      <div className="h-10 w-10 rounded-full bg-[#498dcb] flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-semibold font-heading text-sm">{initials}</span>
+                      </div>
+                      <div className="flex flex-col">
+                        <div className="font-medium tracking-tight leading-5 font-heading text-gray-900">{name}</div>
+                        <div className="leading-5 opacity-60 tracking-tight font-heading text-gray-600">{role}</div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </React.Fragment>
+          )),
+        ]}
+      </motion.div>
     </div>
   );
 };
 
-export default function TestimonialsColumns() {
+const testimonials = [
+  {
+    text: "R&R Solar fixed our inverter issue in just one visit. Professional, fast, and reasonably priced. Our system is back to full production.",
+    name: "Sarah M.",
+    role: "Salt Lake City, UT",
+  },
+  {
+    text: "Had a roof leak after our original installer went out of business. R&R Solar came out quickly and fixed everything properly. No more leaks!",
+    name: "Mike J.",
+    role: "Provo, UT",
+  },
+  {
+    text: "Excellent service! They diagnosed our monitoring issue and had our app working again the same day. Highly recommend for any solar repairs.",
+    name: "Lisa C.",
+    role: "Ogden, UT",
+  },
+  {
+    text: "Our solar system stopped producing power. R&R Solar identified the problem with our optimizer and replaced it within 48 hours. Great work!",
+    name: "David R.",
+    role: "Park City, UT",
+  },
+  {
+    text: "We needed our panels removed for a roof replacement. They handled everything perfectly and coordinated with our roofer. System works better than ever!",
+    name: "Jennifer K.",
+    role: "Sandy, UT",
+  },
+  {
+    text: "Fast response for our critter damage issue. They sealed everything up and installed guards to prevent future problems. Very thorough!",
+    name: "Tom H.",
+    role: "Draper, UT",
+  },
+  {
+    text: "The diagnostic was detailed and transparent. They explained everything clearly and the repair cost was exactly as quoted. No surprises!",
+    name: "Amanda S.",
+    role: "Lehi, UT",
+  },
+  {
+    text: "Our SolarEdge inverter was showing errors constantly. R&R Solar came out same week, diagnosed the issue, and had us back online quickly.",
+    name: "Robert M.",
+    role: "American Fork, UT",
+  },
+  {
+    text: "They fixed wiring issues left by our original installer. Professional, knowledgeable, and they actually care about quality work. Highly recommended!",
+    name: "Emily W.",
+    role: "Orem, UT",
+  },
+];
+
+const firstColumn = testimonials.slice(0, 3);
+const secondColumn = testimonials.slice(3, 6);
+const thirdColumn = testimonials.slice(6, 9);
+
+export default function Testimonials() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {testimonials.map((testimonial, index) => (
-          <TestimonialCard key={index} {...testimonial} />
-        ))}
+    <section className="bg-gray-50 py-20 relative">
+      <div className="container z-10 mx-auto max-w-[1200px] px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center justify-center max-w-[700px] mx-auto"
+        >
+          <h2 className="text-[36px] sm:text-[40px] lg:text-[52px] font-medium font-heading mb-6 text-gray-800 text-center">
+            What Our Customers Say
+          </h2>
+          <p className="text-center text-lg text-gray-600 font-heading">
+            Don't just take our word for it. Hear from satisfied homeowners across Utah.
+          </p>
+        </motion.div>
+
+        <div className="flex justify-center gap-6 mt-16 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
+          <TestimonialsColumn testimonials={firstColumn} duration={15} />
+          <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={19} />
+          <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={17} />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
-

@@ -1,0 +1,54 @@
+---
+interface Props {
+  title: string;
+  price: string;
+  description: string;
+  features: string[];
+  featured?: boolean;
+}
+
+const { title, price, description, features, featured = false } = Astro.props;
+---
+
+<div class={`h-auto md:h-[400px] bg-white rounded-[32px] shadow-[0_0_32px_rgba(0,0,0,0.05)] transition-shadow duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 opacity-0 translate-y-8 scale-90 p-6 ${
+  featured ? 'ring-2 ring-[#498dcb] relative' : ''
+}`} style="animation: fadeInUp 0.6s ease forwards">
+  {featured && (
+    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+      <span class="bg-[#498dcb] text-white px-4 py-1 rounded-full text-sm font-semibold font-heading">
+        Most Popular
+      </span>
+    </div>
+  )}
+  
+  <div class="flex flex-col justify-center gap-6 h-full">
+    <div class="text-center">
+      <h3 class="text-3xl font-bold text-gray-800 m-0 font-heading">{title}</h3>
+    </div>
+
+    <div class="text-center">
+      <div class="text-4xl font-bold text-[#498dcb] m-0 font-heading">{price}</div>
+      <p class="text-base text-gray-600 m-0 font-heading">{description}</p>
+    </div>
+
+    <ul class="space-y-3 mb-6">
+      {features.map((feature) => (
+        <li class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-[#498dcb] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          <span class="text-gray-700 font-heading">{feature}</span>
+        </li>
+      ))}
+    </ul>
+
+    <div class="text-center">
+      <a 
+        href="#issue-chooser" 
+        class="cta-button self-center !bg-[#F2F2F2] !border !border-[#E1E1E1] !shadow-none !h-[48px] font-heading"
+      >
+        Get Quote
+      </a>
+    </div>
+  </div>
+</div>
