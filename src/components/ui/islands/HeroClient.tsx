@@ -41,7 +41,7 @@ export default function HeroClient() {
     const charDelay = 0.04;
 
     return text.split(' ').map((word, wordIndex) => (
-      <span key={wordIndex} className="inline-block whitespace-nowrap">
+      <span key={wordIndex} className="inline-block whitespace-nowrap mr-[18px]">
         {word.split('').map((char) => {
           const delay = baseDelay + charIndex * charDelay;
           charIndex++;
@@ -51,7 +51,6 @@ export default function HeroClient() {
             </span>
           );
         })}
-        {wordIndex < text.split(' ').length - 1 && ' '}
       </span>
     ));
   };
@@ -77,16 +76,16 @@ export default function HeroClient() {
 
       {/* Hero Content */}
       <div ref={contentRef} className="relative z-[2] max-w-[1200px] w-full px-8" style={{ willChange: 'transform' }}>
-        <div className="relative w-full max-w-[580px] text-left">
+        <div className="relative w-full max-w-[800px] text-left">
           {/* Preheading Badge */}
-          <div className="inline-flex items-center gap-2.5 mb-8 font-heading text-base font-normal leading-6 tracking-[0.1em] uppercase text-white/95 opacity-0 translate-y-5 animate-[fadeInUp_0.8s_ease_0.3s_forwards]">
+          <div className="inline-flex items-center gap-2.5 mb-6 pt-8 md:pt-0 font-heading text-base font-normal leading-6 tracking-[0.1em] text-white/95 opacity-0 translate-y-5 animate-[fadeInUp_0.8s_ease_0.3s_forwards]">
             <span className="w-14 h-0.5 bg-white/80 rounded-sm"></span>
             Utah Part 61 Flight Training
           </div>
 
           {/* H1 with Character Reveal */}
           <h1 className="hero-title font-heading text-5xl md:text-7xl font-medium leading-[1.2] mb-7 text-white tracking-tight max-w-[900px]">
-            {wrapCharacters('Your Pilot Career')}
+            {wrapCharacters('Your Pilot Training')}
             <br />
             {wrapCharacters('Starts Here')}
           </h1>
@@ -98,20 +97,20 @@ export default function HeroClient() {
           </h2>
 
           {/* Buttons */}
-          <div className="flex gap-4 flex-wrap mb-16 opacity-0 translate-y-5 animate-[fadeInUp_0.8s_ease_1.1s_forwards]">
-            <a href="#discovery" className="cta-button">
+          <div className="flex gap-4 flex-wrap mb-12 opacity-0 translate-y-5 animate-[fadeInUp_0.8s_ease_1.1s_forwards]">
+            <a href="#discovery" className="cta-button font-normal">
               Book $140 Discovery Flight
             </a>
-            <a href="#programs" className="secondary-button">
+            <a href="#programs" className="secondary-button font-normal !hidden md:!inline-flex">
               Explore Career Paths
             </a>
           </div>
 
           {/* Google Reviews Widget */}
-          <div className="mt-8 opacity-0 translate-y-5 animate-[fadeInUp_0.8s_ease_1.3s_forwards]">
+          <div className="mt-4 opacity-0 translate-y-5 animate-[fadeInUp_0.8s_ease_1.3s_forwards]">
             <div className="flex flex-col gap-1 pl-4 py-2 border-l-[3px] border-white/80">
-              <div className="text-white text-base tracking-[0.125rem] leading-none pb-5">★★★★★</div>
-              <div className="text-sm text-white/95 font-medium leading-none">100+ Positive Client Reviews</div>
+              <div className="text-white text-lg tracking-[0.125rem] leading-none pb-5">★★★★★</div>
+              <div className="text-sm text-white/95 font-normal leading-none">100+ Positive Client Reviews</div>
             </div>
           </div>
         </div>

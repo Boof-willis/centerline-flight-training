@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{astro,html,js,jsx,ts,tsx}'],
+    darkMode: ['class'],
+    content: ['./src/**/*.{astro,html,js,jsx,ts,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -12,8 +13,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        heading: ['Manrope', 'sans-serif'],
+        sans: ['Manrope', 'Manrope Placeholder', 'sans-serif'],
+        heading: ['Manrope', 'Manrope Placeholder', 'sans-serif'],
       },
     },
   },

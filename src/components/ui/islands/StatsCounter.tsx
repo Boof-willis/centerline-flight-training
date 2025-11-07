@@ -69,10 +69,10 @@ function StatItem({ number, label }: StatItemProps) {
 export default function StatsCounter() {
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 md:gap-12">
-      <StatItem number="15+" label="Years of experience" />
-      <StatItem number="200+" label="Pilots trained" />
-      <StatItem number="500+" label="Flight hours logged" />
-      <StatItem number="10,000+" label="Training hours" />
+      <StatItem number="25+" label="Years of experience" />
+      <StatItem number="400+" label="Pilots trained" />
+      <StatItem number="15,000+" label="Training hours" />
+      <StatItem number="300+" label="Discovery flights" />
     </div>
   );
 }

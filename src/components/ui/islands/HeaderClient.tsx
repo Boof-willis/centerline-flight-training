@@ -26,12 +26,12 @@ export default function HeaderClient() {
     <header className={`fixed md:absolute top-0 left-0 right-0 z-[1000] py-4 transition-colors duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'} md:bg-transparent md:shadow-none`}
     >
       <nav className="flex justify-between items-center w-full px-8 max-w-[1200px] mx-auto relative z-[1001]">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-6">
           <div className="flex items-center">
             <img
-              src="https://cdn.prod.website-files.com/68e55206dd9a99d26d08a73b/68e7203ec72ce71aa5a7dd83_white%20runway%20trans.png"
+              src="/images/logo/Centerline-Logo.svg"
               alt="Centerline Flight Training"
-              className="h-20 w-auto"
+              className={`h-20 w-auto transition-all duration-300 ${mobileMenuOpen || scrolled ? 'invert' : ''}`}
             />
           </div>
           <div className="w-[3px] h-6 bg-white/30 hidden md:block"></div>
@@ -40,45 +40,50 @@ export default function HeaderClient() {
               <a
                 href="#programs"
                 onClick={(e) => handleNavClick(e, '#programs')}
-                className="text-white font-medium hover:text-yellow-400 transition-colors"
+                className="text-white !font-normal relative inline-block group"
               >
                 Programs
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
             <li>
               <a
                 href="#fleet"
                 onClick={(e) => handleNavClick(e, '#fleet')}
-                className="text-white font-medium hover:text-yellow-400 transition-colors"
+                className="text-white !font-normal relative inline-block group"
               >
                 Fleet
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
             <li>
               <a
                 href="#discovery"
                 onClick={(e) => handleNavClick(e, '#discovery')}
-                className="text-white font-medium hover:text-yellow-400 transition-colors"
+                className="text-white !font-normal relative inline-block group"
               >
                 Discovery
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
             <li>
               <a
                 href="#why-us"
                 onClick={(e) => handleNavClick(e, '#why-us')}
-                className="text-white font-medium hover:text-yellow-400 transition-colors"
+                className="text-white !font-normal relative inline-block group"
               >
                 Why Us
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
             <li>
               <a
                 href="#faq"
                 onClick={(e) => handleNavClick(e, '#faq')}
-                className="text-white font-medium hover:text-yellow-400 transition-colors"
+                className="text-white !font-normal relative inline-block group"
               >
                 FAQs
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
           </ul>
@@ -122,45 +127,50 @@ export default function HeaderClient() {
               <a
                 href="#programs"
                 onClick={(e) => handleNavClick(e, '#programs')}
-                className="text-gray-900 font-heading font-light text-base hover:text-blue-600 transition-colors"
+                className="text-gray-900 font-heading font-normal text-base relative inline-block group"
               >
                 Programs
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
             <li>
               <a
                 href="#fleet"
                 onClick={(e) => handleNavClick(e, '#fleet')}
-                className="text-gray-900 font-heading font-light text-base hover:text-blue-600 transition-colors"
+                className="text-gray-900 font-heading font-normal text-base relative inline-block group"
               >
                 Fleet
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
             <li>
               <a
                 href="#discovery"
                 onClick={(e) => handleNavClick(e, '#discovery')}
-                className="text-gray-900 font-heading font-light text-base hover:text-blue-600 transition-colors"
+                className="text-gray-900 font-heading font-normal text-base relative inline-block group"
               >
                 Discovery
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
             <li>
               <a
                 href="#why-us"
                 onClick={(e) => handleNavClick(e, '#why-us')}
-                className="text-gray-900 font-heading font-light text-base hover:text-blue-600 transition-colors"
+                className="text-gray-900 font-heading font-normal text-base relative inline-block group"
               >
                 Why Us
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
             <li>
               <a
                 href="#faq"
                 onClick={(e) => handleNavClick(e, '#faq')}
-                className="text-gray-900 font-heading font-light text-base hover:text-blue-600 transition-colors"
+                className="text-gray-900 font-heading font-normal text-base relative inline-block group"
               >
                 FAQs
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
             <li>

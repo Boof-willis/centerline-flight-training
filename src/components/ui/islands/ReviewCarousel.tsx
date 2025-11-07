@@ -6,25 +6,37 @@ interface Review {
   image: string;
 }
 
+const getInitials = (author: string): string => {
+  // Extract name part before the comma (e.g., "Sarah Miller, Lawyer" -> "Sarah Miller")
+  const namePart = author.split(',')[0].trim();
+  const nameParts = namePart.split(' ');
+  if (nameParts.length >= 2) {
+    // Get first letter of first name and first letter of last name
+    return (nameParts[0][0] + nameParts[nameParts.length - 1][0]).toUpperCase();
+  }
+  // Fallback: just first two letters if only one name
+  return namePart.substring(0, 2).toUpperCase();
+};
+
 const reviews: Review[] = [
   {
-    text: "I've learned more in the past few months with my coach than I did in years on my own. Their personalized approach made all the difference.",
-    author: 'Sarah Miller, Lawyer',
+    text: "I did a Discovery Flight with Cole Barton from Centerline Aviation. He made sure I understood each part of the plane... They let me do all of the flying with assistance. Fantastic discovery flight and cheaper than most places I've seen. 5 stars!!!",
+    author: 'Jordan London, Discovery Flight',
     image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face',
   },
   {
-    text: 'The hangared fleet was a game-changer. I trained through December-February with ZERO weather cancellations while friends at other schools lost weeks to snow delays.',
-    author: 'Marcus Chen, SkyWest Pilot',
+    text: "Thank You so much for the memorable experience today! Had a discovery flight and it far exceeded our expectations!",
+    author: 'Ken Martin, Discovery Flight',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
   },
   {
-    text: "As a working professional, the flexible scheduling was crucial. I flew before work twice a week and Saturdays. Got my PPL in 7 months without quitting my job.",
-    author: 'Jennifer Martinez, Business Owner',
+    text: "I've had 2 different instructors at Centerline, both have been awesome. The planes are in really good shape and Spanish Fork airport is a great place to learn at. Would recommend.",
+    author: 'Samuel Fleming, Student Pilot',
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
   },
   {
-    text: "Started at 47 years old as a bucket-list goal. The instructors never made me feel behind. Best investment I've ever made.",
-    author: 'Robert Williams, Private Pilot',
+    text: "Good safety record and excellent pass rate.",
+    author: 'Nicholas Smout, Pilot',
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
   },
 ];
@@ -111,23 +123,19 @@ export default function ReviewCarousel() {
         <span className="text-base text-gray-800 font-medium">{reviews[currentReview].author}</span>
       </div>
 
-      {/* Profile Pictures */}
+      {/* Profile Initials */}
       <div className="flex justify-center gap-4 items-center">
         {reviews.map((review, index) => (
           <div
             key={index}
-            className={`rounded-full overflow-hidden transition-all duration-300 cursor-pointer hover:scale-105 ${
-              currentReview === index ? 'w-[66px] h-[66px] scale-110' : 'w-[60px] h-[60px]'
+            className={`rounded-full transition-all duration-300 cursor-pointer hover:scale-105 flex items-center justify-center font-semibold text-white ${
+              currentReview === index 
+                ? 'w-[66px] h-[66px] scale-110 bg-gray-800 text-lg' 
+                : 'w-[60px] h-[60px] bg-gray-600 text-base'
             }`}
             onClick={() => handleProfileClick(index)}
           >
-            <img
-              src={review.image}
-              alt={review.author}
-              className={`w-full h-full object-cover transition-all duration-300 ${
-                currentReview === index ? 'grayscale-0' : 'grayscale'
-              }`}
-            />
+            {getInitials(review.author)}
           </div>
         ))}
       </div>

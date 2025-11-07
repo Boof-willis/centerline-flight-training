@@ -8,6 +8,16 @@ interface Testimonial {
   role: string;
 }
 
+const getInitials = (name: string): string => {
+  const nameParts = name.split(' ');
+  if (nameParts.length >= 2) {
+    // Get first letter of first name and first letter of last name
+    return (nameParts[0][0] + nameParts[nameParts.length - 1][0]).toUpperCase();
+  }
+  // Fallback: just first two letters if only one name
+  return name.substring(0, 2).toUpperCase();
+};
+
 const TestimonialsColumn = ({
   className,
   testimonials,
@@ -33,20 +43,16 @@ const TestimonialsColumn = ({
       >
         {[...new Array(2).fill(0)].map((_, index) => (
           <React.Fragment key={index}>
-            {testimonials.map(({ text, image, name, role }, i) => (
+            {testimonials.map(({ text, name, role }, i) => (
               <div
                 className="p-8 rounded-3xl border border-gray-200 shadow-lg bg-white hover:shadow-xl hover:border-blue-300 transition-all duration-300 max-w-xs w-full flex flex-col"
                 key={i}
               >
                 <div className="text-gray-700 leading-relaxed mb-6 flex-grow font-heading">{text}</div>
                 <div className="flex items-center gap-3 mt-auto">
-                  <img
-                    width={40}
-                    height={40}
-                    src={image}
-                    alt={name}
-                    className="h-10 w-10 rounded-full object-cover flex-shrink-0"
-                  />
+                  <div className="h-10 w-10 rounded-full bg-gray-600 flex items-center justify-center flex-shrink-0 text-white font-semibold text-sm">
+                    {getInitials(name)}
+                  </div>
                   <div className="flex flex-col">
                     <div className="font-semibold tracking-tight leading-5 text-gray-900 font-heading">{name}</div>
                     <div className="leading-5 text-gray-600 tracking-tight text-sm font-heading">{role}</div>
@@ -63,58 +69,52 @@ const TestimonialsColumn = ({
 
 const testimonials: Testimonial[] = [
   {
-    text: "Best decision I ever made. Cole walked me through everything from ground school to checkride prep. Now I'm building hours as a CFI here while working my IT job in Provo. The flexible schedule made it all possible.",
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
-    name: 'Jake Morrison',
-    role: 'CFI, Former Software Engineer',
-  },
-  {
-    text: "Started training at 52 thinking I was too old. The instructors never made me feel that way. Passed my checkride first try in 9 months while working full time in Salt Lake. Spanish Fork airport is perfect for training.",
+    text: "I did a Discovery Flight with Cole Barton from Centerline Aviation. He made sure I understood each part of the plane... They let me do all of the flying with assistance. Fantastic discovery flight and cheaper than most places I've seen. 5 stars!!!",
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
-    name: 'David Chen',
-    role: 'Private Pilot, Accountant',
+    name: 'Jordan London',
+    role: 'Discovery Flight Student',
   },
   {
-    text: "The hangared fleet is clutch during Utah winters. I trained December through March with zero cancellations while my buddy at another school lost 3 weeks to weather. That alone made the difference.",
+    text: "Thank You so much for the memorable experience today! Had a discovery flight and it far exceeded our expectations!",
     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face',
-    name: 'Tyler Jensen',
-    role: 'Commercial Pilot',
+    name: 'Ken Martin',
+    role: 'Discovery Flight',
   },
   {
-    text: "As a mom of three in Lehi, I needed weekend and evening slots. Centerline made it work. Flying Saturdays and Tuesday evenings, I got my PPL in 8 months without sacrificing family time. Game changer.",
+    text: "I did an introductory flight with Centerline Aviation. They were easy to work with and incredibly helpful. I did my flight with Cole who was generous in offering up his insights & knowledge of flying.",
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
-    name: 'Sarah Thompson',
-    role: 'Private Pilot, Business Owner',
+    name: 'Kendall Rupp',
+    role: 'Introductory Flight',
   },
   {
-    text: "Went from discovery flight to SkyWest FO in 20 months. The instructors know the exact standards airlines look for. Jack prepped me so well, my sim eval was easier than expected. Worth every penny.",
+    text: "I've had 2 different instructors at Centerline, both have been awesome. The planes are in really good shape and Spanish Fork airport is a great place to learn at. Would recommend.",
     image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face',
-    name: 'Marcus Rodriguez',
-    role: 'SkyWest First Officer',
+    name: 'Samuel Fleming',
+    role: 'Student Pilot',
   },
   {
-    text: "The DA40 with G1000 is perfect for instrument training. Way more modern than the old steam gauge planes at other schools. My transition to airline glass cockpits was seamless.",
+    text: "Had a fantastic introductory flight. Would highly recommend flying with this company. The instructors are really cool.",
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face',
-    name: 'Emily Martinez',
-    role: 'Instrument Rated, BYU Student',
+    name: 'Kevin Ford',
+    role: 'Introductory Flight',
   },
   {
-    text: "Pay-as-you-go pricing saved me. I didn't have to take out a huge loan upfront like at Part 141 schools. Paid for each lesson as I went while working construction. No debt, just my license.",
+    text: "My son and I had a great introductory flight with Nate. He explained everything very well. Plane was in good shape.",
     image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=100&h=100&fit=crop&crop=face',
-    name: 'Brandon Wright',
-    role: 'Private Pilot, Contractor',
+    name: 'Ben McMillan',
+    role: 'Introductory Flight',
   },
   {
-    text: "Living in Spanish Fork and training here was perfect. 5 minutes from my house. The instructors are locals who actually care about your success, not just churning through students.",
+    text: "We thoroughly enjoyed our discovery flight. Braken is a very professional and personable instructor.",
     image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face',
-    name: 'Jessica Park',
-    role: 'CFI, Mapleton Resident',
+    name: 'Geniel McDonald',
+    role: 'Discovery Flight',
   },
   {
-    text: "Got my Private, Instrument, and Commercial here. Same instructors the whole way through—they knew exactly where I needed work. Now I'm instructing here and giving back. This place is family.",
+    text: "Clean planes and great instructors!",
     image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&h=100&fit=crop&crop=face',
-    name: 'Ryan Nelson',
-    role: 'CFI/CFII',
+    name: 'Hannah Olivares',
+    role: 'Student',
   },
 ];
 
@@ -139,7 +139,7 @@ export default function TestimonialsAnimated() {
             </div>
           </div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-5 text-center text-gray-900 font-heading">
+          <h2 className="text-[36px] lg:text-[52px] font-medium tracking-tight mt-5 text-center text-gray-900 font-heading">
             What our students say
           </h2>
           <p className="text-center mt-5 text-gray-600 font-heading">

@@ -54,11 +54,11 @@ function CareerCard({ icon, title, description, timeline, image }: CareerCardPro
   return (
     <div
       ref={cardRef}
-      className="h-auto md:h-[500px] bg-white rounded-[32px] shadow-[0_0_32px_rgba(0,0,0,0.05)] overflow-hidden transition-shadow duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 opacity-0 translate-y-8 scale-90 p-4 sticky top-32 md:top-8 w-[calc(100%+32px)] -ml-4 -mr-4"
+      className="h-auto md:h-[502px] bg-white rounded-[32px] shadow-[0_0_32px_rgba(0,0,0,0.05)] overflow-hidden transition-shadow duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 opacity-0 translate-y-8 scale-90 p-4 sticky top-32 md:top-8 w-[calc(100%+32px)] -ml-4 -mr-4"
       style={{ animation: 'fadeInUp 0.6s ease forwards' }}
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 h-full">
-        <div className="w-full h-[200px] md:h-full rounded-2xl overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:h-full">
+        <div className="w-full h-[200px] md:h-full overflow-hidden" style={{ borderRadius: '1.2rem' }}>
           {image ? (
             <img src={image} alt={title} className="w-full h-full object-cover" />
           ) : (
@@ -68,18 +68,20 @@ function CareerCard({ icon, title, description, timeline, image }: CareerCardPro
           )}
         </div>
 
-        <div className="flex flex-col justify-center gap-6">
-          <div className="flex items-center gap-3">
-            <h3 className="text-3xl font-bold text-gray-800 m-0 font-heading">{title}</h3>
+        <div className="flex flex-col justify-between gap-4 py-2 md:h-full">
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <h3 className="text-3xl font-bold text-gray-800 m-0 font-heading">{title}</h3>
+            </div>
+
+            <p className="text-base leading-relaxed text-gray-600 m-0 mb-4 font-heading">{description}</p>
+
+            <p className="text-base text-blue-600 m-0 font-heading">
+              <strong>{timeline}</strong>
+            </p>
           </div>
 
-          <p className="text-base leading-relaxed text-gray-600 m-0 font-heading">{description}</p>
-
-          <p className="text-base text-blue-600 m-0 font-heading">
-            <strong>{timeline}</strong>
-          </p>
-
-          <a href="#contact" className="cta-button self-start !bg-[#F2F2F2] !border !border-[#E1E1E1] !shadow-none !h-[48px]">
+          <a href="#contact" className="cta-button self-start !bg-[#F2F2F2] !border !border-[#E1E1E1] !shadow-none !h-[48px] mt-4 md:mt-auto">
             Get in touch
           </a>
         </div>
@@ -96,21 +98,21 @@ export default function CareerCards() {
         title="Airline Pilot"
         description="Fly for major carriers like Delta, United, Southwest. Starting salaries $90K+, senior captains earn $400K+. High demand with pilot shortage expected through 2030s."
         timeline="Timeline: 18-24 months to airlines"
-        image="/images/aircraft/commercial-airliner.png"
+        image="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/Boeing%20787%20Dreamliner.avif"
       />
       <CareerCard
         icon="🏢"
         title="Corporate Pilot"
         description="Fly private jets for businesses and executives. Better work-life balance, home most nights. Salaries $75K-$200K+ depending on aircraft type."
         timeline="Timeline: 12-18 months to entry positions"
-        image="/images/aircraft/private-jet.png"
+        image="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/Gulfstream%20G700.avif"
       />
       <CareerCard
         icon="🎖️"
         title="Military Pilot"
         description="Serve your country flying fighters, transports, or helicopters. Full benefits, retirement, and pathway to airlines afterward. Private pilot license gives you a competitive edge."
         timeline="Timeline: Start with PPL, then OCS/Academy"
-        image="/images/aircraft/military-plane.png"
+        image="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/F22%20Raptor.avif"
       />
     </div>
   );

@@ -15,7 +15,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: "Manrope", "Manrope Placeholder", sans-serif;
   }
 }
 
@@ -66,7 +66,7 @@
   padding: 0 4px 0 24px;
   border: none;
   border-radius: 24px;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1rem;
   text-decoration: none;
   cursor: pointer;
@@ -107,12 +107,12 @@
   justify-content: center;
   background: #ffffff26;
   color: white;
-  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border: none;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 0.875rem 2rem;
   border-radius: 100px;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1;
   text-decoration: none;
@@ -120,8 +120,7 @@
 }
 
 .secondary-button:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 /* Smooth scrolling */
