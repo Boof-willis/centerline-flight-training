@@ -55,11 +55,11 @@ function CareerCard({ icon, title, description, timeline, image, features }: Car
   return (
     <div
       ref={cardRef}
-      className="h-auto md:h-[502px] bg-white rounded-[32px] shadow-[0_4px_16px_rgba(0,0,0,0.05)] overflow-hidden transition-shadow duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 opacity-0 translate-y-8 scale-90 p-4 sticky top-5 md:top-8 w-[calc(100%+32px)] -ml-4 -mr-4"
+      className="h-auto lg:h-[502px] bg-white rounded-[32px] shadow-[0_4px_16px_rgba(0,0,0,0.05)] overflow-hidden transition-shadow duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 opacity-0 translate-y-8 scale-90 p-4 sticky top-5 lg:top-8 w-[calc(100%+32px)] -ml-4 -mr-4"
       style={{ animation: 'fadeInUp 0.6s ease forwards' }}
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 md:h-full">
-        <div className="w-full h-[200px] md:h-full overflow-hidden" style={{ borderRadius: '1.2rem' }}>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 lg:h-full">
+        <div className="w-full h-[200px] lg:h-full overflow-hidden" style={{ borderRadius: '1.2rem' }}>
           {image ? (
             <img src={image} alt={title} className="w-full h-full object-cover" />
           ) : (
@@ -69,10 +69,10 @@ function CareerCard({ icon, title, description, timeline, image, features }: Car
           )}
         </div>
 
-        <div className="flex flex-col justify-between gap-4 py-2 md:h-full">
+        <div className="flex flex-col justify-between gap-4 py-2 lg:h-full">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <h3 className="text-[24px] md:text-[32px] font-medium text-gray-800 m-0 font-heading">{title}</h3>
+              <h3 className="text-[24px] lg:text-[32px] font-medium text-gray-800 m-0 font-heading">{title}</h3>
             </div>
 
             <p className="text-base leading-relaxed text-gray-600 m-0 mb-4 font-heading">{description}</p>
@@ -105,7 +105,7 @@ function CareerCard({ icon, title, description, timeline, image, features }: Car
             </p>
           </div>
 
-          <a href="#contact" className="cta-button self-start !bg-[#F2F2F2] !border !border-[#E1E1E1] !shadow-none !h-[48px] mt-4 md:mt-auto">
+          <a href="#contact" className="cta-button self-start !bg-[#F2F2F2] !border !border-[#E1E1E1] !shadow-none !h-[48px] mt-4 lg:mt-auto">
             Get in touch
           </a>
         </div>
