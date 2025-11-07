@@ -5,7 +5,10 @@ export default function HeaderClient() {
   const [scrolled, setScrolled] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(true);
   const lastScrollY = useRef(0);
+  const scrollHistory = useRef<Array<{ y: number; time: number }>>([]);
   const isMobile = useRef(false);
+  const minScrollDistance = 80; // minimum pixels to scroll in time window
+  const scrollTimeWindow = 150; // milliseconds to measure scroll speed
 
   useEffect(() => {
     const checkMobile = () => {
@@ -19,6 +22,7 @@ export default function HeaderClient() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      const currentTime = Date.now();
       setScrolled(currentScrollY > 50);
 
       // Only apply scroll hide/show on mobile
@@ -26,12 +30,32 @@ export default function HeaderClient() {
         if (currentScrollY < 50) {
           // Always show at top of page
           setHeaderVisible(true);
+          scrollHistory.current = [];
         } else if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
           // Scrolling down - hide header
           setHeaderVisible(false);
+          scrollHistory.current = [];
         } else if (currentScrollY < lastScrollY.current) {
-          // Scrolling up - show header
-          setHeaderVisible(true);
+          // Scrolling up - track scroll history
+          scrollHistory.current.push({ y: currentScrollY, time: currentTime });
+          
+          // Keep only recent scroll history (within time window)
+          const cutoffTime = currentTime - scrollTimeWindow;
+          scrollHistory.current = scrollHistory.current.filter(
+            (entry) => entry.time > cutoffTime
+          );
+          
+          // Calculate total scroll distance in the time window
+          if (scrollHistory.current.length >= 2) {
+            const oldest = scrollHistory.current[0];
+            const newest = scrollHistory.current[scrollHistory.current.length - 1];
+            const scrollDistance = oldest.y - newest.y; // positive when scrolling up
+            
+            // Only show header if user scrolled a significant distance quickly
+            if (scrollDistance >= minScrollDistance) {
+              setHeaderVisible(true);
+            }
+          }
         }
       } else {
         // Always visible on desktop
