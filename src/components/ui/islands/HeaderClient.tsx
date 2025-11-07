@@ -1,12 +1,44 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function HeaderClient() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [headerVisible, setHeaderVisible] = useState(true);
+  const lastScrollY = useRef(0);
+  const isMobile = useRef(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      isMobile.current = window.innerWidth < 768;
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      setScrolled(currentScrollY > 50);
+
+      // Only apply scroll hide/show on mobile
+      if (isMobile.current) {
+        if (currentScrollY < 50) {
+          // Always show at top of page
+          setHeaderVisible(true);
+        } else if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
+          // Scrolling down - hide header
+          setHeaderVisible(false);
+        } else if (currentScrollY < lastScrollY.current) {
+          // Scrolling up - show header
+          setHeaderVisible(true);
+        }
+      } else {
+        // Always visible on desktop
+        setHeaderVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -23,7 +55,10 @@ export default function HeaderClient() {
   };
 
   return (
-    <header className={`fixed md:absolute top-0 left-0 right-0 z-[1000] py-4 transition-colors duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'} md:bg-transparent md:shadow-none`}
+    <header 
+      className={`fixed md:absolute top-0 left-0 right-0 z-[1000] py-4 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'} md:bg-transparent md:shadow-none ${
+        headerVisible ? 'translate-y-0' : '-translate-y-full'
+      }`}
     >
       <nav className="flex justify-between items-center w-full px-8 max-w-[1200px] mx-auto relative z-[1001]">
         <div className="flex items-center gap-6">
@@ -118,6 +153,8 @@ export default function HeaderClient() {
       <div 
         className={`md:hidden fixed top-0 left-0 right-0 bg-white shadow-lg overflow-hidden transition-all duration-500 ease-in-out z-[999] ${
           mobileMenuOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
+        } ${
+          headerVisible ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
         <div className="flex flex-col items-center" style={{ marginTop: '88px', paddingTop: '24px' }}>

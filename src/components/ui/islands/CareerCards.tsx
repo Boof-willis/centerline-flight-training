@@ -55,7 +55,7 @@ function CareerCard({ icon, title, description, timeline, image, features }: Car
   return (
     <div
       ref={cardRef}
-      className="h-auto md:h-[502px] bg-white rounded-[32px] shadow-[0_4px_16px_rgba(0,0,0,0.05)] overflow-hidden transition-shadow duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 opacity-0 translate-y-8 scale-90 p-4 sticky top-32 md:top-8 w-[calc(100%+32px)] -ml-4 -mr-4"
+      className="h-auto md:h-[502px] bg-white rounded-[32px] shadow-[0_4px_16px_rgba(0,0,0,0.05)] overflow-hidden transition-shadow duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 opacity-0 translate-y-8 scale-90 p-4 sticky top-5 md:top-8 w-[calc(100%+32px)] -ml-4 -mr-4"
       style={{ animation: 'fadeInUp 0.6s ease forwards' }}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 md:h-full">
