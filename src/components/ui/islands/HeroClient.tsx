@@ -64,7 +64,7 @@ export default function HeroClient() {
           className="absolute top-0 left-0 right-0 bottom-0 w-full h-full z-[1] opacity-0 scale-110"
           style={{
             backgroundImage:
-              "url('/images/hero/Hero Background Desktop - Airplane Over Lake.png')",
+              "url('https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/hero/Airplane%20Over%20Lake.avif')",
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center 30%',
@@ -92,7 +92,7 @@ export default function HeroClient() {
 
           {/* Subheading */}
           <h2 className="font-heading text-base leading-6 text-white/90 mb-10 max-w-[620px] font-normal opacity-0 translate-y-5 animate-[fadeInUp_0.8s_ease_0.9s_forwards]">
-            Train for your private pilot license at Spanish Fork's premier Part 61 flight school. Flexible scheduling and transparent pricing make flying achievable for students and professionals alike. Pay-as-you-go from $140.
+            Train for your private pilot license at Spanish Fork's Part 61 flight school. Flexible scheduling and transparent pricing make flying achievable. Pay-as-you-go from $140.
           </h2>
 
           {/* Buttons */}

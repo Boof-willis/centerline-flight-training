@@ -161,7 +161,7 @@ export default function CareerCards() {
         title="Recreation Pilot"
         description="Fly for the joy of it. Take family and friends on weekend adventures, explore scenic destinations, and experience the freedom of flight. Perfect for those who want to fly without the career commitment."
         timeline="Timeline: 3-6 months to Private Pilot License"
-        image="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/private-jet.png"
+        image="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/Bush%20Plane.avif"
         features={[
           'Fly for fun & adventure',
           'Take family & friends',
