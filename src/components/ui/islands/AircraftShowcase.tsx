@@ -16,7 +16,7 @@ const aircraft: Aircraft[] = [
     primaryDesc: 'The DiamondStar is a great cross-country plane and instrument trainer.',
     secondaryDesc: "Equipped with the Garmin G1000 'glass cockpit.'",
     price: '$265 per hour',
-    image: 'https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/DA40%20XL.png',
+    image: 'https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/DA40%20XL.avif',
   },
   {
     id: 'da40',
@@ -24,21 +24,21 @@ const aircraft: Aircraft[] = [
     primaryDesc: 'The DiamondStar is a great cross-country plane and instrument trainer.',
     secondaryDesc: "Equipped with the Garmin G1000 'glass cockpit.'",
     price: '$240/hr',
-    image: 'https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/DA40.png',
+    image: 'https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/DA40.avif',
   },
   {
     id: 'da20-eclipse',
     title: 'DIAMOND DA20 ECLIPSE',
     primaryDesc: 'The DA20 is our primary 2-seat trainer.',
     price: '$165/hr',
-    image: 'https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/953.png',
+    image: 'https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/359.avif',
   },
   {
     id: 'da20-eclipse-2',
     title: 'DIAMOND DA20 ECLIPSE',
     primaryDesc: 'The DA20 is our primary 2-seat trainer.',
     price: '$165/hr',
-    image: 'https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/359.png',
+    image: 'https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/953.avif',
   },
 ];
 
