@@ -4,15 +4,15 @@ export default function HeaderClient() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
   const lastScrollY = useRef(0);
   const scrollHistory = useRef<Array<{ y: number; time: number }>>([]);
-  const isMobile = useRef(false);
   const minScrollDistance = 80; // minimum pixels to scroll in time window
   const scrollTimeWindow = 150; // milliseconds to measure scroll speed
 
   useEffect(() => {
     const checkMobile = () => {
-      isMobile.current = window.innerWidth < 768;
+      setIsMobile(window.innerWidth < 768);
     };
     checkMobile();
     window.addEventListener('resize', checkMobile);
@@ -26,7 +26,7 @@ export default function HeaderClient() {
       setScrolled(currentScrollY > 50);
 
       // Only apply scroll hide/show on mobile
-      if (isMobile.current) {
+      if (isMobile) {
         if (currentScrollY < 50) {
           // Always show at top of page
           setHeaderVisible(true);
@@ -67,7 +67,7 @@ export default function HeaderClient() {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isMobile]);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -90,7 +90,7 @@ export default function HeaderClient() {
             <img
               src="/images/logo/Centerline-Logo.svg"
               alt="Centerline Flight Training"
-              className={`h-20 w-auto transition-all duration-300 ${mobileMenuOpen || scrolled ? 'invert' : ''}`}
+              className={`h-20 w-auto transition-all duration-300 ${mobileMenuOpen || (scrolled && isMobile) ? 'invert' : ''}`}
             />
           </div>
           <div className="w-[3px] h-6 bg-white/30 hidden md:block"></div>
