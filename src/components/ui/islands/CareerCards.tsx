@@ -9,7 +9,7 @@ interface CareerCardProps {
   features?: string[];
 }
 
-function CareerCard({ icon, title, description, timeline, image, features }: CareerCardProps) {
+function CareerCard({ title, description, timeline, image, features }: CareerCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

@@ -6,18 +6,6 @@ interface Review {
   image: string;
 }
 
-const getInitials = (author: string): string => {
-  // Extract name part before the comma (e.g., "Sarah Miller, Lawyer" -> "Sarah Miller")
-  const namePart = author.split(',')[0].trim();
-  const nameParts = namePart.split(' ');
-  if (nameParts.length >= 2) {
-    // Get first letter of first name and first letter of last name
-    return (nameParts[0][0] + nameParts[nameParts.length - 1][0]).toUpperCase();
-  }
-  // Fallback: just first two letters if only one name
-  return namePart.substring(0, 2).toUpperCase();
-};
-
 const reviews: Review[] = [
   {
     text: "I did a Discovery Flight with Cole Barton from Centerline Aviation. He made sure I understood each part of the plane... They let me do all of the flying with assistance. Fantastic discovery flight and cheaper than most places I've seen. 5 stars!!!",
@@ -320,7 +308,7 @@ export default function ReviewCarousel() {
 
       {/* Dots Indicator */}
       <div className="flex justify-center gap-2 items-center">
-        {reviews.map((review, index) => (
+        {reviews.map((_, index) => (
           <button
             key={index}
             type="button"

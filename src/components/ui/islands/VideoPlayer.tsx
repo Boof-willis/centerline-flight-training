@@ -3,10 +3,9 @@ import { useState, useRef } from 'react';
 interface VideoPlayerProps {
   videoSrc: string;
   thumbnailSrc: string;
-  alt: string;
 }
 
-export default function VideoPlayer({ videoSrc, thumbnailSrc, alt }: VideoPlayerProps) {
+export default function VideoPlayer({ videoSrc, thumbnailSrc }: VideoPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
