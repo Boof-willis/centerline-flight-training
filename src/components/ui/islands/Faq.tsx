@@ -42,6 +42,16 @@ function FaqItem({ question, answer }: FaqItemProps) {
 export default function Faq() {
   const faqs = [
     {
+      question: 'How long does it take to get my license?',
+      answer:
+        "Private Pilot License: 3-6 months part-time (flying 2-3 times per week) or 2-3 months full-time. Commercial Pilot License: 8-12 months part-time or 4-6 months full-time from zero experience. Our flexible Part 61 program lets you control the pace—train as often or as little as your schedule allows.",
+    },
+    {
+      question: "How much does it cost to get my license?",
+      answer:
+        "Private Pilot License: $8,000-$12,000. Commercial Pilot License: $25,000-$35,000 from zero experience. Zero to Commercial (all ratings): $60,000-$80,000 total. We offer pay-as-you-go pricing—no large upfront payment required. Many students offset costs by becoming instructors and getting paid to build hours.",
+    },
+    {
       question: 'How long does it take to become an airline pilot?',
       answer:
         "From zero experience to airline-ready: 18-24 months training full-time, or 2-3 years part-time while working. Breakdown: Private Pilot (3-6 months) → Instrument (2-4 months) → Commercial (4-8 months) → CFI (2-3 months) → Build hours to 1,500 (8-12 months instructing). Our flexible Part 61 program lets you control the pace.",

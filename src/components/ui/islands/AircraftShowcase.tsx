@@ -48,10 +48,15 @@ export default function AircraftShowcase() {
   const selectedPlane = aircraft[selectedAircraft];
 
   return (
-    <div className="max-w-[1200px] mx-auto px-8 py-20">
-      {/* Section Title - Mobile Only */}
+    <div className="max-w-[1200px] mx-auto px-8 py-20 md:py-0">
+      {/* Section Title - Mobile */}
       <h2 className="text-[36px] lg:text-[52px] font-medium mb-8 text-white font-heading text-center md:hidden">
-        Discovery Flight
+        Modern Fleet
+      </h2>
+
+      {/* Section Title - Desktop */}
+      <h2 className="hidden md:block text-[36px] lg:text-[52px] font-medium mb-8 text-white font-heading text-center">
+        Modern Fleet
       </h2>
 
       {/* Mobile Layout - Amazon Style */}

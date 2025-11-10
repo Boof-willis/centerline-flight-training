@@ -80,20 +80,19 @@ export default function HeroClient() {
           {/* Preheading Badge */}
           <div className="inline-flex items-center gap-2.5 mb-6 pt-8 md:pt-0 font-heading text-base font-normal leading-6 tracking-[0.1em] text-white/95 opacity-0 translate-y-5 animate-[fadeInUp_0.8s_ease_0.3s_forwards]">
             <span className="w-14 h-0.5 bg-white/80 rounded-sm"></span>
-            Utah Part 61 Flight Training
+            Spanish Fork Flight School
           </div>
 
           {/* H1 with Character Reveal */}
           <h1 className="hero-title font-heading text-5xl md:text-7xl font-medium leading-[1.2] mb-7 text-white tracking-tight max-w-[900px]">
-            {wrapCharacters('Your Pilot Training')}
+            {wrapCharacters('Your Pilot Journey')}
             <br />
             {wrapCharacters('Starts Here')}
           </h1>
 
           {/* Subheading */}
           <h2 className="font-heading text-base leading-6 text-white/90 mb-10 max-w-[620px] font-normal opacity-0 translate-y-5 animate-[fadeInUp_0.8s_ease_0.9s_forwards]">
-            Train on your schedule in Spanish Fork. Weekend & evening flights for working professionals. Modern
-            hangared fleet, transparent pricing, pay-as-you-go from $140.
+            Train for your private pilot license at Spanish Fork's premier Part 61 flight school. Flexible scheduling and transparent pricing make flying achievable for students and professionals alike. Pay-as-you-go from $140.
           </h2>
 
           {/* Buttons */}

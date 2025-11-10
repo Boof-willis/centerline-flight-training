@@ -122,7 +122,7 @@ export default function CareerCards() {
         title="Airline Pilot"
         description="Fly for major carriers like Delta, United, Southwest. Starting salaries $90K+, senior captains earn $400K+. High demand with pilot shortage expected through 2030s."
         timeline="Timeline: 18-24 months to airlines"
-        image="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/Boeing%20787%20Dreamliner.png"
+        image="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/Boeing%20787%20Dreamliner%20(1).avif"
         features={[
           'Starting salary $90K+',
           'Senior captains earn $400K+',
@@ -154,6 +154,19 @@ export default function CareerCards() {
           'Serve your country',
           'Pathway to airlines',
           'PPL gives competitive edge'
+        ]}
+      />
+      <CareerCard
+        icon="✈️"
+        title="Recreation Pilot"
+        description="Fly for the joy of it. Take family and friends on weekend adventures, explore scenic destinations, and experience the freedom of flight. Perfect for those who want to fly without the career commitment."
+        timeline="Timeline: 3-6 months to Private Pilot License"
+        image="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/private-jet.png"
+        features={[
+          'Fly for fun & adventure',
+          'Take family & friends',
+          'Weekend getaways',
+          'No career commitment required'
         ]}
       />
     </div>
