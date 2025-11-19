@@ -109,8 +109,9 @@ export default function AircraftShowcase() {
 
         {/* CTA Button */}
         <a
-          href="#contact"
+          href="/contact"
           className="cta-button self-start block text-center"
+          data-astro-prefetch="tap"
         >
           Book Discovery Flight
         </a>
@@ -189,8 +190,9 @@ export default function AircraftShowcase() {
               </p>
             </div>
             <a
-              href="#contact"
+              href="/contact"
               className="cta-button whitespace-nowrap"
+              data-astro-prefetch="tap"
             >
               Book Discovery Flight
             </a>

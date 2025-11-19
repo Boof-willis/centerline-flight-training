@@ -1,5 +1,5 @@
 ---
-// Footer component
+// Contact page footer component with specific navigation
 ---
 
 <footer class="bg-black text-white py-16">
@@ -31,22 +31,13 @@
           <h4 class="text-base font-medium mb-6 text-gray-300 font-heading">Quick Links</h4>
           <ul class="space-y-3">
             <li>
-              <a href="/#programs" class="text-gray-400 hover:text-white transition-colors font-heading">Programs</a>
+              <a href="/" class="text-gray-400 hover:text-white transition-colors font-heading">Home</a>
             </li>
             <li>
-              <a href="/#fleet" class="text-gray-400 hover:text-white transition-colors font-heading">Fleet</a>
+              <a href="#contact-form" class="text-gray-400 hover:text-white transition-colors font-heading scroll-to-form">Get in Touch</a>
             </li>
             <li>
-              <a href="/#discovery" class="text-gray-400 hover:text-white transition-colors font-heading">Discovery Flight</a>
-            </li>
-            <li>
-              <a href="/#why-us" class="text-gray-400 hover:text-white transition-colors font-heading">Why Us</a>
-            </li>
-            <li>
-              <a href="/#faq" class="text-gray-400 hover:text-white transition-colors font-heading">FAQs</a>
-            </li>
-            <li>
-              <a href="/contact" class="text-gray-400 hover:text-white transition-colors font-heading">Contact</a>
+              <a href="#map-section" class="text-gray-400 hover:text-white transition-colors font-heading scroll-to-map">Find Us</a>
             </li>
           </ul>
         </div>
@@ -97,4 +88,25 @@
     </div>
   </div>
 </footer>
+
+<script is:inline>
+  // Handle smooth scrolling for footer links
+  if (typeof window !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', () => {
+      const scrollLinks = document.querySelectorAll('.scroll-to-form, .scroll-to-map');
+      
+      scrollLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const href = link.getAttribute('href');
+          const target = document.querySelector(href);
+          
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    });
+  }
+</script>
 

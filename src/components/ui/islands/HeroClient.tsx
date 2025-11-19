@@ -97,7 +97,7 @@ export default function HeroClient() {
 
           {/* Buttons */}
           <div className="flex gap-4 flex-wrap mb-12 opacity-0 translate-y-5 animate-[fadeInUp_0.8s_ease_1.1s_forwards]">
-            <a href="#contact" className="cta-button font-normal">
+            <a href="/contact" className="cta-button font-normal" data-astro-prefetch="tap">
               Book a Free Consultation
             </a>
             <a href="#programs" className="secondary-button font-normal !hidden md:!inline-flex">

@@ -1,0 +1,58 @@
+---
+import '@/styles/global.css';
+import HeaderClient from '@/components/ui/islands/HeaderClient';
+import Footer from '@/components/ui/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found | Centerline Flight Training</title>
+    <meta name="description" content="The page you're looking for couldn't be found. Return to Centerline Flight Training's homepage." />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="404 - Page Not Found | Centerline Flight Training" />
+    <meta property="og:description" content="The page you're looking for couldn't be found. Return to Centerline Flight Training's homepage." />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="404 - Page Not Found | Centerline Flight Training" />
+    <meta name="twitter:description" content="The page you're looking for couldn't be found. Return to Centerline Flight Training's homepage." />
+    
+    <link rel="apple-touch-icon" href="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/logo/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/logo/favicon-96x96.png" />
+    <link rel="icon" type="image/x-icon" href="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/logo/favicon.ico" />
+    <link rel="manifest" href="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/logo/site.webmanifest" />
+    <link rel="icon" type="image/png" sizes="192x192" href="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/logo/web-app-manifest-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/logo/web-app-manifest-512x512.png" />
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- Header -->
+    <HeaderClient client:load />
+
+    <!-- 404 Content -->
+    <main class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 pt-32 pb-20 px-8">
+      <div class="max-w-[600px] mx-auto text-center">
+        <h1 class="text-[120px] md:text-[160px] font-bold text-white mb-4 leading-none font-heading">
+          404
+        </h1>
+        <h2 class="text-3xl md:text-4xl font-medium text-white mb-4 font-heading">
+          Page Not Found
+        </h2>
+        <p class="text-lg md:text-xl text-gray-300 mb-8 font-heading max-w-[500px] mx-auto">
+          Looks like this page took an unexpected flight path. Let's get you back on course.
+        </p>
+        <a href="/" class="cta-button">
+          Return to Home
+        </a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <Footer />
+  </body>
+</html>
+

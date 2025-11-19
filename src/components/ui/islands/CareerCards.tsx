@@ -148,7 +148,7 @@ export default function CareerCards() {
         title="Military Pilot"
         description="Serve your country flying fighters, transports, or helicopters. Full benefits, retirement, and pathway to airlines afterward. Private pilot license gives you a competitive edge."
         timeline="Timeline: Start with PPL, then OCS/Academy"
-        image="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/F22%20Raptor.avif"
+        image="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/F22.avif"
         features={[
           'Full benefits & retirement',
           'Serve your country',
@@ -161,7 +161,7 @@ export default function CareerCards() {
         title="Recreation Pilot"
         description="Fly for the joy of it. Take family and friends on weekend adventures, explore scenic destinations, and experience the freedom of flight. Perfect for those who want to fly without the career commitment."
         timeline="Timeline: 3-6 months to Private Pilot License"
-        image="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/Bush%20Plane.avif"
+        image="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/Bush%20Plane%20(1).avif"
         features={[
           'Fly for fun & adventure',
           'Take family & friends',
