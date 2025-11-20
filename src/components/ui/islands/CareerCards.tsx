@@ -15,15 +15,23 @@ function CareerCard({ title, description, timeline, image, features }: CareerCar
   useEffect(() => {
     let ticking = false;
 
+    const getViewportHeight = () => {
+      // Use visualViewport API for more accurate mobile viewport, especially Safari
+      if (typeof window !== 'undefined' && window.visualViewport) {
+        return window.visualViewport.height;
+      }
+      return window.innerHeight;
+    };
+
     const updateCardScale = () => {
       if (!cardRef.current) return;
 
       const rect = cardRef.current.getBoundingClientRect();
       const cardTop = rect.top;
       const cardHeight = rect.height;
-      const viewportHeight = window.innerHeight;
+      const viewportHeight = getViewportHeight();
 
-      const entryPoint = viewportHeight;
+      const entryPoint = viewportHeight * 0.9; // Start animation earlier (90% of viewport)
       const exitPoint = entryPoint - cardHeight;
 
       let scale = 0.9;
@@ -47,9 +55,24 @@ function CareerCard({ title, description, timeline, image, features }: CareerCar
     };
 
     window.addEventListener('scroll', requestTick, { passive: true });
+    window.addEventListener('resize', requestTick, { passive: true });
+    
+    // Listen to visualViewport changes on mobile
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', requestTick);
+      window.visualViewport.addEventListener('scroll', requestTick);
+    }
+    
     updateCardScale();
 
-    return () => window.removeEventListener('scroll', requestTick);
+    return () => {
+      window.removeEventListener('scroll', requestTick);
+      window.removeEventListener('resize', requestTick);
+      if (window.visualViewport) {
+        window.visualViewport.removeEventListener('resize', requestTick);
+        window.visualViewport.removeEventListener('scroll', requestTick);
+      }
+    };
   }, []);
 
   return (
