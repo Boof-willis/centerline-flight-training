@@ -224,7 +224,7 @@ export default function ContactForm() {
           required
           checked={formData.consent}
           onChange={handleChange}
-          className="mt-0.5 w-3.5 h-3.5 bg-transparent border border-[#2E2E2E]/50 rounded text-white focus:ring-2 focus:ring-white focus:border-white cursor-pointer accent-white"
+          className="mt-1 w-4 h-4 rounded cursor-pointer appearance-none border-2 border-gray-600 bg-gray-700/50 checked:bg-white checked:border-white focus:ring-2 focus:ring-white focus:ring-offset-0 transition-all flex-shrink-0 relative after:content-[''] after:absolute after:top-[1px] after:left-[5px] after:w-[6px] after:h-[10px] after:border-r-2 after:border-b-2 after:border-black after:rotate-45 after:opacity-0 checked:after:opacity-100"
         />
         <label htmlFor="consent" className="text-xs text-gray-400 font-heading leading-snug">
           I consent to receive SMS/calls from Centerline Aviation INC. Msg & data rates may apply. Reply STOP to opt-out. Not a condition of purchase. *
