@@ -9,6 +9,7 @@ import TrainingPathway from '@/components/ui/islands/TrainingPathway';
 import AircraftShowcase from '@/components/ui/islands/AircraftShowcase';
 import TestimonialsAnimated from '@/components/ui/islands/TestimonialsAnimated';
 import Faq from '@/components/ui/islands/Faq';
+import VideoPlayer from '@/components/ui/islands/VideoPlayer';
 import CtaBand from '@/components/ui/CtaBand.astro';
 import Footer from '@/components/ui/Footer.astro';
 ---
@@ -98,11 +99,12 @@ import Footer from '@/components/ui/Footer.astro';
             <!-- Content -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <div class="h-[400px] rounded-xl overflow-hidden">
-                  <img
-                    src="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/DA40%20in%20Hangar.avif"
-                    alt="Diamond aircraft in hangar at Centerline Flight Training"
-                    class="w-full h-full object-cover"
+                <div class="h-[400px] rounded-xl overflow-hidden flex items-center justify-center">
+                  <VideoPlayer 
+                    client:load
+                    videoSrc="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/videos/Cole_Barton_Centerline_Aviation.mp4"
+                    thumbnailSrc="https://pub-b9b491aee0b94c2c8e6c5d1dde4848db.r2.dev/public/images/aircraft/DA40%20in%20Hangar.avif"
+                    modal={true}
                   />
                 </div>
               </div>
