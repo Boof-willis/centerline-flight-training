@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -12,6 +12,72 @@ export default function ContactForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [utmParams, setUtmParams] = useState<Record<string, string>>({});
+
+  // Capture UTM parameters and gclid on component mount
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const utmData: Record<string, string> = {};
+    
+    // Capture standard UTM parameters (utm_source, utm_medium, etc.)
+    const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+    utmKeys.forEach(key => {
+      const value = params.get(key);
+      if (value) utmData[key] = value;
+    });
+    
+    // Also capture non-prefixed versions (source, medium, campaign, etc.)
+    const basicKeys = [
+      { param: 'source', utmKey: 'utm_source' },
+      { param: 'medium', utmKey: 'utm_medium' },
+      { param: 'campaign', utmKey: 'utm_campaign' },
+      { param: 'term', utmKey: 'utm_term' },
+      { param: 'content', utmKey: 'utm_content' }
+    ];
+    
+    basicKeys.forEach(({ param, utmKey }) => {
+      const value = params.get(param);
+      // Only use non-prefixed version if utm_ version doesn't exist
+      if (value && !utmData[utmKey]) {
+        utmData[utmKey] = value;
+      }
+    });
+    
+    // Capture gclid (Google Click ID)
+    const gclid = params.get('gclid');
+    if (gclid) utmData.gclid = gclid;
+    
+    // Capture fbclid (Facebook Click ID)
+    const fbclid = params.get('fbclid');
+    if (fbclid) utmData.fbclid = fbclid;
+    
+    // Capture msclkid (Microsoft/Bing Click ID)
+    const msclkid = params.get('msclkid');
+    if (msclkid) utmData.msclkid = msclkid;
+    
+    // Also check localStorage in case UTM params were on landing page but not current page
+    const storedUtms = localStorage.getItem('utm_params');
+    if (storedUtms) {
+      try {
+        const stored = JSON.parse(storedUtms);
+        // Use stored UTMs if current page doesn't have them
+        Object.keys(stored).forEach(key => {
+          if (!utmData[key]) utmData[key] = stored[key];
+        });
+      } catch (e) {
+        // Ignore parse errors
+      }
+    }
+    
+    // Store UTM params for future page loads
+    if (Object.keys(utmData).length > 0) {
+      localStorage.setItem('utm_params', JSON.stringify(utmData));
+      setUtmParams(utmData);
+      console.log('✅ UTM params captured and stored:', utmData);
+    } else {
+      console.log('⚠️ No UTM params found in URL or localStorage');
+    }
+  }, []);
 
   const formatPhoneNumber = (value: string) => {
     // Remove all non-numeric characters
@@ -52,6 +118,10 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
+    // Debug: Log what UTM params we have
+    console.log('UTM Params being sent:', utmParams);
+    console.log('localStorage utm_params:', localStorage.getItem('utm_params'));
+
     // Check honeypot field - if filled, it's a bot
     if (formData.honeypot) {
       // Silently fail - pretend it worked but don't send anything
@@ -85,6 +155,8 @@ export default function ContactForm() {
           message: formData.message,
           consent: formData.consent,
           submittedAt: new Date().toISOString(),
+          // Include UTM parameters and gclid for campaign tracking
+          ...utmParams,
         }),
       });
 

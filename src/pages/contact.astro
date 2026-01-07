@@ -161,5 +161,76 @@ import ContactFooter from '@/components/ui/ContactFooter.astro';
 
     <!-- Footer -->
     <ContactFooter />
+
+    <!-- Global UTM Parameter Capture - Must run on every page -->
+    <script is:inline>
+      (function() {
+        const params = new URLSearchParams(window.location.search);
+        const utmData = {};
+        
+        // Capture standard UTM parameters
+        ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(key => {
+          const value = params.get(key);
+          if (value) utmData[key] = value;
+        });
+        
+        // Capture non-prefixed versions
+        const basicMap = { source: 'utm_source', medium: 'utm_medium', campaign: 'utm_campaign', term: 'utm_term', content: 'utm_content' };
+        Object.entries(basicMap).forEach(([param, utmKey]) => {
+          const value = params.get(param);
+          if (value && !utmData[utmKey]) utmData[utmKey] = value;
+        });
+        
+        // Capture click IDs
+        ['gclid', 'fbclid', 'msclkid'].forEach(key => {
+          const value = params.get(key);
+          if (value) utmData[key] = value;
+        });
+        
+        // Store in localStorage if we found any params
+        if (Object.keys(utmData).length > 0) {
+          localStorage.setItem('utm_params', JSON.stringify(utmData));
+          console.log('🎯 UTM params captured on page load:', utmData);
+        }
+      })();
+    </script>
+
+    <!-- LeadConnector Dynamic Phone Number Tracking Scripts - Delayed for React hydration -->
+    <script is:inline>
+      // Wait for all React components to hydrate before loading LeadConnector scripts
+      window.addEventListener('load', function() {
+        // Check if this is a tracked session (has UTM params or gclid in localStorage)
+        var utmParams = localStorage.getItem('utm_params');
+        var isPaidTraffic = false;
+        
+        if (utmParams) {
+          try {
+            var params = JSON.parse(utmParams);
+            // Check if we have any tracking parameters
+            isPaidTraffic = !!(params.utm_source || params.utm_medium || params.utm_campaign || params.gclid || params.fbclid || params.msclkid);
+          } catch (e) {
+            // Ignore parse errors
+          }
+        }
+        
+        if (isPaidTraffic) {
+          console.log('🎯 Paid traffic detected - loading DNI scripts');
+          // Add a small delay to ensure React hydration is complete
+          setTimeout(function() {
+            var script1 = document.createElement('script');
+            script1.src = 'https://backend.leadconnectorhq.com/appengine/loc/10LCZDnUvwfyH3005w5r/pool/45veuB8MghSmQSK2MtZQ/number_pool.js';
+            document.body.appendChild(script1);
+            
+            script1.onload = function() {
+              var script2 = document.createElement('script');
+              script2.src = 'https://backend.leadconnectorhq.com/appengine/js/user_session.js';
+              document.body.appendChild(script2);
+            };
+          }, 100);
+        } else {
+          console.log('🌐 Organic traffic - DNI scripts not loaded');
+        }
+      });
+    </script>
   </body>
 </html>
